@@ -7,8 +7,8 @@ import "styles/ekivibes.css"
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseURL()),
   title: {
-    default: "Ekivibes",
-    template: "%s | Ekivibes",
+    default: "Hit-Air Colombia",
+    template: "%s | Hit-Air Colombia",
   },
 }
 
@@ -23,7 +23,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap"
           rel="stylesheet"
         />
       </head>

@@ -233,3 +233,8 @@ img { max-width:100%; }
 .pdp-d-table td{border:1px solid var(--line);padding:10px 12px;text-align:center;color:#333}
 .pdp-d-table tbody tr:nth-child(even){background:#f7f7f8}
 .pdp-d-fine{max-width:760px;margin:8px auto 0;color:#8a8a8a;font-size:.82rem;text-align:center;font-style:italic}
+.pdp-d-caption{max-width:820px;margin:0 auto 20px;color:#555;font-size:.85rem;text-align:center;line-height:1.5}
+.pdp-d-text{max-width:760px;margin:0 auto 20px;color:#444;font-size:.92rem;text-align:center;line-height:1.6}
+.pdp-d-videos{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:900px;margin:0 auto}
+.pdp-d-video{flex:1;min-width:280px;max-width:420px}
+.pdp-d-video iframe{width:100%;aspect-ratio:16/9;border:none;display:block}

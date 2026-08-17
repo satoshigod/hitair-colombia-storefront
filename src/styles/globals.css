@@ -175,7 +175,7 @@
   height: 20px;
   padding: 0 6px;
   border-radius: 9999px;
-  background: #A8935E;
+  background: #D62828;
   color: #fff;
   font-size: 11px;
   font-weight: 600;
@@ -196,7 +196,7 @@
 .ekv-mini-cart-header {
   font-size: 13px;
   font-weight: 600;
-  color: #2B2D42;
+  color: #0D0D0F;
   padding-bottom: 12px;
   border-bottom: 1px solid #eee;
   margin-bottom: 12px;
@@ -225,7 +225,7 @@
 .ekv-mini-cart-info { min-width: 0; }
 .ekv-mini-cart-title {
   font-size: 13px;
-  color: #2B2D42;
+  color: #0D0D0F;
   margin: 0;
   line-height: 1.3;
 }
@@ -248,7 +248,7 @@
   margin-top: 12px;
   border-top: 1px solid #eee;
   font-size: 14px;
-  color: #2B2D42;
+  color: #0D0D0F;
 }
 .ekv-mini-cart-actions {
   display: flex;
@@ -264,8 +264,8 @@
   font-weight: 500;
   transition: opacity 0.15s ease;
 }
-.ekv-btn-primary { background: #2B2D42; color: #fff; }
-.ekv-btn-secondary { background: #fff; color: #2B2D42; border: 1px solid #d1d5db; }
+.ekv-btn-primary { background: #0D0D0F; color: #fff; }
+.ekv-btn-secondary { background: #fff; color: #0D0D0F; border: 1px solid #d1d5db; }
 .ekv-btn-primary:hover, .ekv-btn-secondary:hover { opacity: 0.85; }
 
 @media (max-width: 640px) {
@@ -286,16 +286,16 @@
   margin-bottom: 1.25rem;
 }
 .ekv-catalog-title {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Rajdhani", Arial, sans-serif;
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 1.15;
-  color: #2B2D42;
+  color: #0D0D0F;
   margin: 0 0 0.5rem;
 }
 .ekv-catalog-desc {
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.9375rem;
   line-height: 1.6;
 }
@@ -332,7 +332,7 @@
   color: inherit;
 }
 .ekv-card:focus-visible {
-  outline: 2px solid #A8935E;
+  outline: 2px solid #D62828;
   outline-offset: 4px;
   border-radius: 10px;
 }
@@ -343,7 +343,7 @@
   /* Altura controlada en vez de proporcion libre: en pantallas anchas
      la proporcion hacia tarjetas de mas de 900px de alto. */
   height: clamp(200px, 21vw, 300px);
-  background: #fafaf9;
+  background: #f7f7f8;
   border-radius: 6px;
   overflow: hidden;
   transition: box-shadow 0.25s ease;
@@ -370,7 +370,7 @@
   left: 10px;
   background: rgba(43, 45, 66, 0.92);
   color: #fff;
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -387,11 +387,11 @@
 
 /* Cormorant es la voz de la marca: aqui el nombre del producto la usa */
 .ekv-card-title {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Rajdhani", Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.25;
-  color: #2B2D42;
+  color: #0D0D0F;
   margin: 0;
 }
 
@@ -404,33 +404,33 @@
   padding: 0;
 }
 .ekv-card-sizes li {
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 11px;
   letter-spacing: 0.04em;
-  color: #6b6a66;
-  border: 1px solid #e3e0d9;
+  color: #55585c;
+  border: 1px solid #dcdde0;
   border-radius: 3px;
   padding: 2px 7px;
   line-height: 1.4;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 .ekv-card:hover .ekv-card-sizes li {
-  border-color: #A8935E;
-  color: #2B2D42;
+  border-color: #D62828;
+  color: #0D0D0F;
 }
 
 /* Numerales tabulares: los precios se alinean entre tarjetas */
 .ekv-card-price {
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.9375rem;
   font-weight: 500;
-  color: #2B2D42;
+  color: #0D0D0F;
   font-variant-numeric: tabular-nums;
   margin: 0.1rem 0 0;
 }
 .ekv-card-from {
   font-weight: 300;
-  color: #8a8880;
+  color: #6b6f75;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -473,7 +473,7 @@
   bottom: 12px;
   background: rgba(43, 45, 66, 0.72);
   color: #fff;
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 11px;
   letter-spacing: 0.04em;
   padding: 4px 9px;
@@ -562,7 +562,7 @@
   border: 2px solid transparent;
   transition: border-color 0.2s ease;
 }
-.ekv-lightbox-thumbs button.is-active { border-color: #A8935E; }
+.ekv-lightbox-thumbs button.is-active { border-color: #D62828; }
 .ekv-lightbox-thumbs img {
   width: 100%;
   height: 100%;
@@ -571,7 +571,7 @@
 
 .ekv-lightbox-counter {
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 12px;
   font-variant-numeric: tabular-nums;
   margin: 0;
@@ -593,17 +593,17 @@
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #e8e4dc;
+  border-bottom: 1px solid #e2e3e5;
 }
 .ekv-faq-title {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Rajdhani", Arial, sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
-  color: #2B2D42;
+  color: #0D0D0F;
   margin: 0 0 0.75rem;
 }
 .ekv-faq-subtitle {
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 1rem;
   color: #6b7280;
   margin: 0;
@@ -612,25 +612,25 @@
 .ekv-faq-body { display: flex; flex-direction: column; gap: 2.5rem; }
 .ekv-faq-section {}
 .ekv-faq-cat {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Rajdhani", Arial, sans-serif;
   font-size: 1.375rem;
   font-weight: 600;
-  color: #A8935E;
+  color: #D62828;
   margin: 0 0 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #e8e4dc;
+  border-bottom: 1px solid #e2e3e5;
   letter-spacing: 0.01em;
 }
 .ekv-faq-list { display: flex; flex-direction: column; gap: 0; }
 .ekv-faq-item {
-  border-bottom: 1px solid #f0ece4;
+  border-bottom: 1px solid #f0f0f1;
 }
 .ekv-faq-item:last-child { border-bottom: none; }
 .ekv-faq-q {
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.9375rem;
   font-weight: 500;
-  color: #2B2D42;
+  color: #0D0D0F;
   padding: 1rem 2rem 1rem 0;
   cursor: pointer;
   list-style: none;
@@ -647,15 +647,15 @@
   transform: translateY(-50%);
   font-size: 1.25rem;
   font-weight: 300;
-  color: #A8935E;
+  color: #D62828;
   transition: transform 0.25s ease;
 }
 details[open] .ekv-faq-q::after {
   transform: translateY(-50%) rotate(45deg);
 }
-details[open] .ekv-faq-q { color: #A8935E; }
+details[open] .ekv-faq-q { color: #D62828; }
 .ekv-faq-a {
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.9rem;
   color: #4b5563;
   line-height: 1.7;
@@ -665,15 +665,15 @@ details[open] .ekv-faq-q { color: #A8935E; }
 .ekv-faq-contact {
   margin-top: 1rem;
   padding: 2rem;
-  background: #fafaf9;
-  border: 1px solid #e8e4dc;
+  background: #f7f7f8;
+  border: 1px solid #e2e3e5;
   border-radius: 8px;
   text-align: center;
 }
 .ekv-faq-contact p {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Rajdhani", Arial, sans-serif;
   font-size: 1.25rem;
-  color: #2B2D42;
+  color: #0D0D0F;
   margin: 0 0 1.25rem;
 }
 .ekv-faq-contact-links {
@@ -683,19 +683,19 @@ details[open] .ekv-faq-q { color: #A8935E; }
   flex-wrap: wrap;
 }
 .ekv-faq-wa {
-  background: #2B2D42;
+  background: #0D0D0F;
   color: #fff;
   padding: 10px 20px;
   border-radius: 6px;
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   transition: opacity 0.2s ease;
 }
 .ekv-faq-wa:hover { opacity: 0.85; }
 .ekv-faq-mail {
-  color: #A8935E;
-  font-family: "Jost", system-ui, sans-serif;
+  color: #D62828;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.875rem;
   display: flex;
   align-items: center;
@@ -714,17 +714,17 @@ details[open] .ekv-faq-q { color: #A8935E; }
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #e8e4dc;
+  border-bottom: 1px solid #e2e3e5;
 }
 .ekv-page-title {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Rajdhani", Arial, sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
-  color: #2B2D42;
+  color: #0D0D0F;
   margin: 0 0 0.75rem;
 }
 .ekv-page-subtitle {
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 1rem;
   color: #6b7280;
   margin: 0;
@@ -732,16 +732,16 @@ details[open] .ekv-faq-q { color: #A8935E; }
 }
 .ekv-page-body { display: flex; flex-direction: column; gap: 2.5rem; }
 .ekv-page-section h2 {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Rajdhani", Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #2B2D42;
+  color: #0D0D0F;
   margin: 0 0 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #e8e4dc;
+  border-bottom: 1px solid #e2e3e5;
 }
 .ekv-page-section p {
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.9375rem;
   color: #4b5563;
   line-height: 1.75;
@@ -749,7 +749,7 @@ details[open] .ekv-faq-q { color: #A8935E; }
 }
 .ekv-page-section p:last-child { margin-bottom: 0; }
 .ekv-page-list {
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.9375rem;
   color: #4b5563;
   line-height: 1.75;
@@ -758,23 +758,23 @@ details[open] .ekv-faq-q { color: #A8935E; }
 }
 .ekv-page-list li { margin-bottom: 0.25rem; }
 .ekv-section-tip {
-  background: #fafaf9;
-  border: 1px solid #e8e4dc;
+  background: #f7f7f8;
+  border: 1px solid #e2e3e5;
   border-radius: 8px;
   padding: 1.5rem;
 }
-.ekv-section-tip h2 { border-bottom-color: #e8e4dc; }
+.ekv-section-tip h2 { border-bottom-color: #e2e3e5; }
 .ekv-page-cta {
   text-align: center;
   padding: 2rem;
-  background: #fafaf9;
-  border: 1px solid #e8e4dc;
+  background: #f7f7f8;
+  border: 1px solid #e2e3e5;
   border-radius: 8px;
 }
 .ekv-page-cta p {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Rajdhani", Arial, sans-serif;
   font-size: 1.25rem;
-  color: #2B2D42;
+  color: #0D0D0F;
   margin: 0 0 1.25rem;
 }
 
@@ -783,12 +783,12 @@ details[open] .ekv-faq-q { color: #A8935E; }
 .ekv-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: "Jost", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.9rem;
   margin-top: 0.5rem;
 }
 .ekv-table th {
-  background: #2B2D42;
+  background: #0D0D0F;
   color: #fff;
   padding: 10px 14px;
   text-align: left;
@@ -799,9 +799,9 @@ details[open] .ekv-faq-q { color: #A8935E; }
 }
 .ekv-table td {
   padding: 10px 14px;
-  border-bottom: 1px solid #f0ece4;
+  border-bottom: 1px solid #f0f0f1;
   color: #374151;
 }
 .ekv-table tr:last-child td { border-bottom: none; }
-.ekv-table tr:nth-child(even) td { background: #fafaf9; }
-.ekv-table td:first-child { font-weight: 600; color: #A8935E; }
+.ekv-table tr:nth-child(even) td { background: #f7f7f8; }
+.ekv-table td:first-child { font-weight: 600; color: #D62828; }

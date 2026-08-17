@@ -3,14 +3,18 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import EkivibesProductCard from "@modules/ekivibes/product-card"
 import Logo from "@modules/ekivibes/logo"
 
-const CATS = [
-  { label: "Ropa",        slug: "ropa",       icon: "/cats/ropa.svg" },
-  { label: "Guantes",     slug: "guantes",    icon: "/cats/guantes.svg" },
-  { label: "Airbag",      slug: "airbag",     icon: "/cats/airbag.svg" },
-  { label: "Cascos",      slug: "cascos",     icon: "/cats/cascos.svg" },
-  { label: "Protección",  slug: "proteccion", icon: "/cats/proteccion.svg" },
-  { label: "Chaps",       slug: "chaps",      icon: "/cats/chaps.svg" },
-  { label: "Accesorios",  slug: "accesorios", icon: "/cats/accesorios.svg" },
+const TECH_SPECS = [
+  { v: "0.1-0.25s", l: "Tiempo de activacion" },
+  { v: "600D", l: "Tejido exterior" },
+  { v: "CE", l: "Proteccion certificada" },
+  { v: "JP", l: "Fabricado en Japon" },
+]
+
+const ZONES = [
+  "Cuello y cervicales",
+  "Columna vertebral",
+  "Torax y costillas",
+  "Coxis y zona lumbar",
 ]
 
 export default async function EkivibesInicio({
@@ -28,80 +32,39 @@ export default async function EkivibesInicio({
     <>
       <div className="hero">
         <div className="hero-horse">
-          <Logo color="#ffffff" height={200} />
+          <Logo color="#ffffff" height={280} />
         </div>
         <div className="hero-c">
-          <h1>Temporada de Competición</h1>
+          <span className="eyebrow">Distribuidor exclusivo Hit-Air Colombia</span>
+          <h1>Airbag que se activa antes del impacto</h1>
           <p>
-            Eleva tu equipamiento con las mejores marcas de equitación.
-            Entrega en toda Colombia.
+            Chalecos y chaquetas Hit-Air con sistema airbag integrado para
+            motociclismo. Proteccion certificada CE, tecnologia japonesa,
+            entrega en toda Colombia.
           </p>
           <LocalizedClientLink href="/store">
-            <button className="btn-gold">Comprar ahora</button>
+            <button className="btn-gold">Ver catalogo</button>
           </LocalizedClientLink>
         </div>
       </div>
 
-      <div className="section">
-        <div className="cats">
-          {CATS.map((c) => (
-            <LocalizedClientLink
-              href={`/categories/${c.slug}`}
-              className="cat"
-              key={c.label}
-            >
-              <div className="cat-circle">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={c.icon}
-                  alt={c.label}
-                  style={{ width: 48, height: 48, objectFit: "contain" }}
-                />
-              </div>
-              <div className="cat-label">{c.label}</div>
-            </LocalizedClientLink>
+      <div className="section" style={{ paddingBottom: 0 }}>
+        <div className="tech-strip">
+          {TECH_SPECS.map((t) => (
+            <div className="tech-item" key={t.l}>
+              <div className="tv mono">{t.v}</div>
+              <div className="tl">{t.l}</div>
+            </div>
           ))}
-        </div>
-      </div>
-
-      {products.length > 0 && (
-        <div className="section" style={{ paddingTop: 0 }}>
-          <div className="section-head">
-            <h2 className="section-title">Nuestros destacados</h2>
-            <LocalizedClientLink className="section-link" href="/store">
-              Ver todo →
-            </LocalizedClientLink>
-          </div>
-          <div className="ekv-grid">
-            {products.slice(0, 4).map((p) => (
-              <EkivibesProductCard key={p.id} product={p} />
-            ))}
-          </div>
-        </div>
-      )}
-
-      <div className="banner">
-        <div className="banner-horse">
-          <Logo color="#ffffff" height={220} />
-        </div>
-        <div className="banner-c">
-          <h2>Seguridad Certificada</h2>
-          <p>
-            Chalecos airbag Hit-Air, la protección líder para tu monta
-            diaria y de competición.
-          </p>
-          <LocalizedClientLink href="/categories/airbag">
-            <button className="btn-gold">Ver airbags</button>
-          </LocalizedClientLink>
         </div>
       </div>
 
       {products.length > 0 && (
         <div className="section">
           <div className="section-head">
-            <h2 className="section-title">Chalecos airbag &amp; accesorios</h2>
+            <h2 className="section-title">Catalogo Hit-Air Colombia</h2>
             <LocalizedClientLink className="section-link" href="/store">
-              Ver todo →
+              Ver todo &rarr;
             </LocalizedClientLink>
           </div>
           <div className="ekv-grid">
@@ -111,6 +74,41 @@ export default async function EkivibesInicio({
           </div>
         </div>
       )}
+
+      <div className="section" style={{ paddingTop: 0 }}>
+        <div className="section-head">
+          <h2 className="section-title">Zonas de proteccion</h2>
+        </div>
+        <div className="zones">
+          <ul className="zones-list">
+            {ZONES.map((z) => (
+              <li key={z}>{z}</li>
+            ))}
+          </ul>
+          <p style={{ flex: 2, minWidth: 260, fontSize: 14, lineHeight: 1.7, color: "#444" }}>
+            Al separarse el piloto de la moto, el cable de activacion libera
+            el cartucho de CO2 y la bolsa de aire se infla en fracciones de
+            segundo, cubriendo las zonas mas vulnerables antes de que ocurra
+            el impacto contra el asfalto.
+          </p>
+        </div>
+      </div>
+
+      <div className="banner">
+        <div className="banner-horse">
+          <Logo color="#ffffff" height={220} />
+        </div>
+        <div className="banner-c">
+          <h2>Seguridad certificada</h2>
+          <p>
+            Chalecos y chaquetas airbag Hit-Air, la proteccion lider para
+            motociclistas en carretera y ciudad.
+          </p>
+          <LocalizedClientLink href="/store">
+            <button className="btn-gold">Ver airbags</button>
+          </LocalizedClientLink>
+        </div>
+      </div>
     </>
   )
 }

@@ -4,9 +4,9 @@ import { Metadata } from "next"
 import EkivibesInicio from "@modules/ekivibes/home"
 
 export const metadata: Metadata = {
-  title: "Ekivibes | Equitación & Chalecos Airbag Hit-Air",
+  title: "Hit-Air Colombia | Chalecos y Chaquetas Airbag para Motociclismo",
   description:
-    "Tienda de equitación en Colombia. Chalecos airbag Hit-Air, accesorios y repuestos originales.",
+    "Distribuidor exclusivo de Hit-Air en Colombia. Chalecos y chaquetas airbag para motociclismo, tecnologia japonesa, certificacion CE, envio a todo el pais.",
 }
 
 export default async function Inicio(props: {

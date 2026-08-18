@@ -89,6 +89,38 @@ export default function GuiaDeTallas() {
           </p>
         </section>
 
+        <section className="ekv-page-section">
+          <h2>Chaqueta Airbag MX-9</h2>
+          <p>
+            Chaqueta de malla con diseño deportivo, reflectivos en varias zonas y
+            protectores CE HEXA (EN1621-1) en hombros y codos, más protector de espalda
+            blando incluido de serie. Sistema airbag desmontable.
+          </p>
+          <div className="ekv-table-wrap">
+            <table className="ekv-table">
+              <thead>
+                <tr>
+                  <th>Talla</th>
+                  <th>Estatura (cm)</th>
+                  <th>Pecho (cm)</th>
+                  <th>Cintura (cm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>S</td><td>160 – 175</td><td>86 – 96</td><td>72 – 80</td></tr>
+                <tr><td>M</td><td>165 – 180</td><td>95 – 105</td><td>78 – 86</td></tr>
+                <tr><td>L</td><td>170 – 185</td><td>100 – 110</td><td>84 – 92</td></tr>
+                <tr><td>XL</td><td>175 – 190</td><td>105 – 115</td><td>90 – 98</td></tr>
+                <tr><td>2XL</td><td>180 – 195</td><td>110 – 120</td><td>96 – 104</td></tr>
+                <tr><td>3XL</td><td>180 – 195</td><td>115 – 125</td><td>102 – 110</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="ekv-page-fine">
+            Edición inicial Colombia: talla M. Otras tallas (S a 3XL) bajo pedido especial.
+          </p>
+        </section>
+
         <section className="ekv-page-section ekv-section-tip">
           <h2>Consejos para elegir bien</h2>
           <ul className="ekv-page-list">

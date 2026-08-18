@@ -1,9 +1,9 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Acerca de Hit-Air | Ekivibes",
+  title: "Acerca de Hit-Air | Hit-Air Colombia",
   description:
-    "Conoce el sistema airbag Hit-Air: cómo funciona, qué protege y por qué es el chaleco de protección más usado en equitación a nivel mundial.",
+    "Conoce el sistema airbag Hit-Air: cómo funciona, qué protege y por qué es la referencia mundial en protección activa para equitación y motociclismo.",
 }
 
 export default function AcercaDeHitAir() {
@@ -12,7 +12,7 @@ export default function AcercaDeHitAir() {
       <div className="ekv-page-header">
         <h1 className="ekv-page-title">Acerca de Hit-Air</h1>
         <p className="ekv-page-subtitle">
-          El sistema airbag líder mundial en protección ecuestre, fabricado en Japón desde 1985
+          El sistema airbag líder mundial en protección para equitación y motociclismo, fabricado en Japón desde 1985
         </p>
       </div>
 
@@ -20,38 +20,40 @@ export default function AcercaDeHitAir() {
         <section className="ekv-page-section">
           <h2>¿Qué es Hit-Air?</h2>
           <p>
-            Hit-Air es un sistema de chaleco airbag fabricado por Mugen Denko Co., Ltd. en Japón.
-            Desde 1985 es el líder mundial en protección activa para equitación y motociclismo,
-            con presencia en Asia, Europa, Australia y América. En Colombia, Ekivibes es el
-            distribuidor exclusivo para la línea ecuestre.
+            Hit-Air es un sistema de chaleco y chaqueta airbag fabricado por Mugen Denko Co., Ltd.
+            en Japón. Desde 1985 es el líder mundial en protección activa tanto para equitación
+            como para motociclismo, con presencia en Asia, Europa, Australia y América. En
+            Colombia, Hit-Air Colombia es el distribuidor exclusivo de la marca para ambas líneas.
           </p>
           <p>
-            A diferencia de los protectores rígidos tradicionales, el chaleco Hit-Air es ligero,
-            cómodo y flexible. Se usa como una prenda normal sobre la ropa de equitación y solo
-            se activa en el momento de una caída, en menos de medio segundo.
+            A diferencia de los protectores rígidos tradicionales, las prendas Hit-Air son ligeras,
+            cómodas y flexibles. Se usan como una prenda normal sobre la ropa de montar o de
+            manejo, y solo se activan en el momento de una caída o accidente, en menos de medio
+            segundo.
           </p>
         </section>
 
         <section className="ekv-page-section">
           <h2>¿Cómo funciona?</h2>
           <p>
-            El chaleco se conecta a la montura mediante un cable en espiral (lanyard) que se fija
-            a las argollas del sillín. En el momento de una caída, cuando el jinete se separa del
-            caballo, el cable se estira y activa automáticamente el mecanismo: el cartucho de CO₂
-            se perfora y el airbag se infla en menos de 0,5 segundos.
+            La prenda se conecta mediante un cable en espiral (lanyard) a un punto fijo: en
+            equitación, a las argollas del sillín; en motociclismo, a un punto de anclaje de la
+            moto. Cuando el jinete o el motociclista se separa del vehículo en una caída, el cable
+            se estira y activa automáticamente el mecanismo: el cartucho de CO₂ se perfora y el
+            airbag se infla en menos de 0,5 segundos.
           </p>
           <p>
             No es necesario hacer nada: el sistema es completamente automático. Una fuerza mínima
             de 25 a 30 kg es necesaria para activarlo, lo que hace prácticamente imposible una
-            activación accidental.
+            activación accidental durante el uso normal, ya sea montando a caballo o en moto.
           </p>
         </section>
 
         <section className="ekv-page-section">
           <h2>¿Qué protege?</h2>
           <p>
-            Al inflarse, el chaleco envuelve completamente el torso del jinete, protegiendo las
-            zonas más vulnerables en una caída:
+            Al inflarse, la prenda envuelve completamente el torso, protegiendo las zonas más
+            vulnerables en una caída o accidente, tanto ecuestre como en moto:
           </p>
           <ul className="ekv-page-list">
             <li>Cuello y nuca</li>
@@ -61,46 +63,46 @@ export default function AcercaDeHitAir() {
           </ul>
           <p>
             La sensación al inflarse es la de un gran cojín firme que te rodea, absorbiendo el
-            impacto antes de que llegues al suelo.
+            impacto antes de llegar al suelo.
           </p>
         </section>
 
         <section className="ekv-page-section">
           <h2>Certificación</h2>
           <p>
-            Los chalecos Hit-Air cumplen la norma europea <strong>EN 1621-4:2013</strong>,
-            la certificación más exigente para protectores airbag en equitación y motociclismo
-            dentro de la Unión Europea.
+            Las prendas Hit-Air cumplen la norma europea <strong>EN 1621-4:2013</strong>,
+            la certificación más exigente para protectores airbag tanto en equitación como en
+            motociclismo dentro de la Unión Europea.
           </p>
         </section>
 
         <section className="ekv-page-section">
           <h2>Reutilizable</h2>
           <p>
-            Después de una caída leve, puedes rearmar el chaleco tú mismo en pocos minutos:
-            vacías el airbag, pliegas los cojines y reemplazas el cartucho de CO₂ por uno nuevo
-            original Hit-Air. El chaleco queda listo para usar nuevamente.
+            Después de una caída leve, puedes rearmar la prenda tú mismo en pocos minutos: vacías
+            el airbag, pliegas los cojines y reemplazas el cartucho de CO₂ por uno nuevo original
+            Hit-Air. Queda lista para usar nuevamente, sin importar si la usas a caballo o en moto.
           </p>
           <p>
-            En caso de una caída fuerte, recomendamos enviarlo a revisión técnica para verificar
-            el estado completo del chaleco y el mecanismo.
+            En caso de una caída o accidente fuerte, recomendamos enviarla a revisión técnica para
+            verificar el estado completo de la prenda y el mecanismo.
           </p>
         </section>
 
         <section className="ekv-page-section">
           <h2>¿Por qué Hit-Air?</h2>
           <ul className="ekv-page-list">
-            <li>Más de 25 años de experiencia y desarrollo en Japón</li>
+            <li>Más de 40 años de experiencia y desarrollo en Japón</li>
             <li>Activación automática en menos de 0,5 segundos</li>
-            <li>Ligero y cómodo: entre 1,2 y 1,5 kg según el modelo</li>
+            <li>Ligero y cómodo, pensado tanto para el jinete como para el motociclista</li>
             <li>Reutilizable después de una caída</li>
             <li>Certificación CE EN 1621-4:2013</li>
-            <li>Distribuidor exclusivo para Colombia: Ekivibes</li>
+            <li>Distribuidor exclusivo para Colombia: Hit-Air Colombia</li>
           </ul>
         </section>
 
         <div className="ekv-page-cta">
-          <p>¿Tienes preguntas sobre el chaleco airbag?</p>
+          <p>¿Tienes preguntas sobre las prendas airbag Hit-Air?</p>
           <a href="/preguntas-frecuentes" className="ekv-btn-primary">
             Ver preguntas frecuentes
           </a>

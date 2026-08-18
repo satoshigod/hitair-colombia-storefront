@@ -151,7 +151,7 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         title: "Detalle de partes y ajustes",
         imgs: [
           {
-            src: "/product-details/hdsms-banner-details.jpg",
+            src: "/product-details/hdsms-banner-details-es.jpg",
             caption:
               "Guardacuello de neoprene, capucha desmontable por cremallera y velcro, ajustador de brazo, " +
               "ajustador de puño con velcro, conector de un toque (hembra) y cordón de ajuste en la cintura.",
@@ -162,7 +162,7 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         title: "Cable en espiral, tela, reflectivos y capucha",
         imgs: [
           {
-            src: "/product-details/hdsms-banner-function.jpg",
+            src: "/product-details/hdsms-banner-function-es.jpg",
             caption:
               "Cable en espiral incluido (se fija a la moto), tela de malla con brillo metálico y gran " +
               "transpirabilidad, impresión reflectiva para visibilidad nocturna, capucha desmontable por " +
@@ -174,7 +174,7 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         title: "Protectores CE",
         imgs: [
           {
-            src: "/product-details/hdsms-banner-protector.jpg",
+            src: "/product-details/hdsms-banner-protector-es.jpg",
             caption:
               "Protectores HEXA de hombro y codo, certificados CE bajo EN1621-1, estructura tipo panal en " +
               "polipropileno y polietileno, livianos. Incluyen de fábrica protector de espalda blando; " +

@@ -357,7 +357,15 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     sections: [
       {
         title: "Chaqueta técnica de invierno, transpirable e impermeable",
-        imgs: [],
+        imgs: [
+          {
+            src: "/product-details/eu7-banner-details-es.jpg",
+            caption:
+              "Vista general de componentes: protector de cuello, bolsillos con cremallera impermeable, " +
+              "caja de llave con cartucho CO2 de 50cc, conector de un toque, cable en espiral y material " +
+              "exterior ripstop.",
+          },
+        ],
         text:
           "Modelo insignia de Hit-Air de estilo europeo. La chaqueta exterior es en ripstop 600D con forro " +
           "de malla y una membrana interior INTERON transpirable e impermeable. El forro térmico interno es " +
@@ -368,10 +376,10 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         title: "Cable en espiral, ventilación, reflectante y capucha",
         imgs: [
           {
-            src: "https://www.hit-air.com/archives/005/202508/e84ba6c405877a3a9eef80459bd376a328214be21a21dd664fccc0c80a5cda33.jpg",
+            src: "/product-details/eu7-banner-function-es.jpg",
             caption:
-              "Cable en espiral (coiled wire) de activación, ventilación en espalda y mangas, material " +
-              "reflectante para visibilidad nocturna y capucha desmontable.",
+              "Chaqueta exterior y forro (liner) por separado: velcro para fijar almohadillas de pecho y " +
+              "espalda opcionales, cordón ajustable y presillas para retirar el forro por el cuello y los puños.",
           },
         ],
       },
@@ -379,7 +387,7 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         title: "Sistema de protección por airbag",
         imgs: [
           {
-            src: "https://www.hit-air.com/archives/005/202508/00d86dac894e2b86b556e459e9481566e04d7964d6b2193b01a33f9c05f7706c.jpg",
+            src: "/product-details/eu7-banner-airbag-es.jpg",
             caption: "Zonas cubiertas al inflarse el airbag: cuello, hombros, pecho y espalda completa.",
           },
           {
@@ -398,7 +406,7 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         title: "Protector CE en hombros y codos",
         imgs: [
           {
-            src: "https://www.hit-air.com/archives/005/202508/74adb8111175f4ca4586279d2c246122b340758bb53d5b630583626fb951c76a.jpg",
+            src: "/product-details/eu7-banner-protector-es.jpg",
             caption:
               "Protectores CE (EN1621-1, tipo HEXA) livianos en hombros y codos, incluidos de serie. Protector " +
               "de pecho y de espalda adicionales disponibles bajo pedido.",

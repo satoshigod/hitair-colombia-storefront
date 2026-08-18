@@ -105,6 +105,101 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
       },
     ],
   },
+  "hitair-hds-ms-jacket-black": {
+    sections: [
+      {
+        title: "Chaqueta con capucha desmontable y protección CE",
+        imgs: [],
+        text:
+          "Chaqueta tipo hoodie que combina estilo urbano deportivo con seguridad. El exterior combina malla " +
+          "transpirable brillante y nylon mate. Incorpora protectores HEXA CE (EN1621-1), livianos, en hombros " +
+          "y codos, más protector de espalda blando de serie. El sistema airbag es desmontable de la chaqueta.",
+      },
+      {
+        title: "Caja de llave y sistema de liberación",
+        imgs: [
+          {
+            src: "https://www.hit-air.com/archives/005/202407/d2f1b860790db7bf1bbb14e80ffa052f.jpg",
+            caption:
+              "Caja de llave (Key Box): aloja el cartucho de CO2 de 50cc y activa el airbag al desconectarse " +
+              "el cable en espiral de la moto.",
+          },
+          {
+            src: "https://www.hit-air.com/archives/005/202407/349078635183fa5e63013fd72a493afe.jpg",
+            caption:
+              "Cubierta de la caja de llave: diseño discreto que oculta el cartucho de CO2 y el orificio de " +
+              "salida del conector tipo bola (keyball).",
+          },
+        ],
+      },
+      {
+        title: "Estructura del airbag",
+        imgs: [
+          {
+            src: "https://www.hit-air.com/archives/005/201912/9117c2fb526b8e382a3e521e467486b1.jpg",
+            caption:
+              "Estructura interna del airbag: se despliega cubriendo cuello, hombros y espalda para absorber " +
+              "el impacto en caso de caída.",
+          },
+        ],
+      },
+      {
+        title: "Ficha visual de funciones",
+        imgs: [
+          {
+            src: "https://www.hit-air.com/archives/005/202407/a6c0db50f1d18b5bda64f5518a2b61e7.jpg",
+            caption:
+              "Vista general del producto: capucha desmontable, ajustador de brazo, cordón de ajuste y " +
+              "ventilación trasera.",
+          },
+          {
+            src: "https://www.hit-air.com/archives/005/202407/28b3e4dfd7aa4c600c3bc0c972c9f8da.jpg",
+            caption:
+              "Cable en espiral, ventilación, material reflectante y capucha — funciones clave de la chaqueta.",
+          },
+          {
+            src: "https://www.hit-air.com/archives/005/202407/583c73b7c3337b7eff8f50c521434c5e.jpg",
+            caption: "Zonas de protección al inflarse el airbag.",
+          },
+          {
+            src: "https://www.hit-air.com/archives/005/202311/843261c997b02538d4b8d9fe24bbb337.jpg",
+            caption: "Protectores HEXA CE en hombros y codos, más protector de espalda.",
+          },
+        ],
+      },
+    ],
+    note: "No laves la chaqueta con el sistema airbag puesto. Retira el airbag antes de lavarla. Revisa periódicamente que el cartucho de CO2 y la llave de resina no presenten grietas ni deformaciones; reemplázalos si detectas algún daño.",
+    tables: [
+      {
+        title: "Ficha técnica",
+        head: ["Especificación", "Detalle"],
+        rows: [
+          ["Color", "Negro"],
+          ["Talla disponible", "M (el modelo oficial va de XS a 2XL bajo pedido)"],
+          ["Cartucho CO2", "50cc"],
+          ["Peso", "2.1 kg"],
+          ["Material", "Exterior: nylon y poliéster · Forro: malla de poliéster · Tubo del airbag: poliuretano"],
+          ["Certificación", "CE — EN1621-1 (protectores HEXA en hombros y codos)"],
+          ["Activación", "Mecánica, por cable en espiral anclado a la moto"],
+          ["Opcionales", "Forro interior impermeable B-Liner7, protector de pecho, protector de espalda CE"],
+        ],
+        fine: "Especificaciones del fabricante (Hit-Air / Mugen Denko Co., Ltd.), sujetas a cambio sin previo aviso.",
+      },
+      {
+        title: "Tabla de tallas (cm)",
+        head: ["Talla", "Estatura", "Pecho", "Cintura"],
+        rows: [
+          ["XS", "150–165", "80–88", "66–74"],
+          ["S", "160–175", "86–96", "72–80"],
+          ["M", "165–180", "95–105", "78–86"],
+          ["L", "170–185", "95–110", "84–92"],
+          ["XL", "175–190", "105–115", "90–98"],
+          ["2XL", "180–195", "110–120", "96–104"],
+        ],
+        fine: "Medidas de referencia del fabricante. Si estás entre dos tallas, escríbenos antes de comprar.",
+      },
+    ],
+  },
 }
 
 export default PRODUCT_DETAILS

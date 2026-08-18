@@ -31,6 +31,7 @@ export default function Footer() {
             <li>Envios y devoluciones</li>
             <li>Contacto</li>
             <li><LocalizedClientLink href="/compras-empresariales" className="footer-link">Compras empresariales</LocalizedClientLink></li>
+            <li><LocalizedClientLink href="/hazte-distribuidor" className="footer-link">Hazte distribuidor</LocalizedClientLink></li>
           </ul>
         </div>
         <div className="footer-col">

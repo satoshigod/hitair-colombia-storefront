@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 export const metadata: Metadata = {
   title: "Acerca de Hit-Air | Hit-Air Colombia",
@@ -103,9 +104,9 @@ export default function AcercaDeHitAir() {
 
         <div className="ekv-page-cta">
           <p>¿Tienes preguntas sobre las prendas airbag Hit-Air?</p>
-          <a href="/preguntas-frecuentes" className="ekv-btn-primary">
+          <LocalizedClientLink href="/preguntas-frecuentes" className="ekv-btn-primary">
             Ver preguntas frecuentes
-          </a>
+          </LocalizedClientLink>
         </div>
       </div>
     </div>

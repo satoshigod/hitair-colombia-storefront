@@ -281,6 +281,121 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
       },
     ],
   },
+  "hitair-eu7-touring-jacket": {
+    sections: [
+      {
+        title: "Chaqueta técnica de invierno, transpirable e impermeable",
+        imgs: [],
+        text:
+          "Modelo insignia de Hit-Air de estilo europeo. La chaqueta exterior es en ripstop 600D con forro " +
+          "de malla y una membrana interior INTERON transpirable e impermeable. El forro térmico interno es " +
+          "desmontable, así que se puede usar todo el año quitando o dejando el forro según el clima. Trae de " +
+          "serie protectores CE (EN1621-1, tipo HEXA), livianos, en hombros y codos.",
+      },
+      {
+        title: "Cable en espiral, ventilación, reflectante y capucha",
+        imgs: [
+          {
+            src: "https://www.hit-air.com/archives/005/202508/e84ba6c405877a3a9eef80459bd376a328214be21a21dd664fccc0c80a5cda33.jpg",
+            caption:
+              "Cable en espiral (coiled wire) de activación, ventilación en espalda y mangas, material " +
+              "reflectante para visibilidad nocturna y capucha desmontable.",
+          },
+        ],
+      },
+      {
+        title: "Sistema de protección por airbag",
+        imgs: [
+          {
+            src: "https://www.hit-air.com/archives/005/202508/00d86dac894e2b86b556e459e9481566e04d7964d6b2193b01a33f9c05f7706c.jpg",
+            caption: "Zonas cubiertas al inflarse el airbag: cuello, hombros, pecho y espalda completa.",
+          },
+          {
+            src: "https://www.hit-air.com/archives/005/202508/3bea7f734dd875b74573dbb44c41273b804d808c6c92bba92fdecec51998d810.jpg",
+            caption:
+              "Airbag desplegado, vista frontal (foto de referencia en gris claro; el funcionamiento es igual " +
+              "en gris oscuro y negro).",
+          },
+          {
+            src: "https://www.hit-air.com/archives/005/202508/f2ddae2616873d61de34df6b5648dd788085001eb524a4b3d4fe67995b5ffa7d.jpg",
+            caption: "Airbag desplegado, vista trasera.",
+          },
+        ],
+      },
+      {
+        title: "Protector CE en hombros y codos",
+        imgs: [
+          {
+            src: "https://www.hit-air.com/archives/005/202508/74adb8111175f4ca4586279d2c246122b340758bb53d5b630583626fb951c76a.jpg",
+            caption:
+              "Protectores CE (EN1621-1, tipo HEXA) livianos en hombros y codos, incluidos de serie. Protector " +
+              "de pecho y de espalda adicionales disponibles bajo pedido.",
+          },
+        ],
+      },
+      {
+        title: "Caja de llave (Key Box)",
+        imgs: [
+          {
+            src: "https://www.hit-air.com/archives/005/202508/c1a78db5b58072b9a538a0d6e24b450e49d8ed9c1655dba1dc6bc667968f7f00.jpg",
+            caption:
+              "Caja de llave con cartucho de CO2 de 50cc, ubicada de forma discreta en la espalda de la chaqueta.",
+          },
+        ],
+      },
+      {
+        title: "Chaqueta exterior y forro térmico desmontable",
+        imgs: [
+          {
+            src: "https://www.hit-air.com/archives/005/202508/14dd65bb09f346bf21c94013fc5550909d006100586512a0e9b0d4787feb812c.jpg",
+            caption:
+              "Chaqueta exterior y forro térmico (liner) por separado: se pueden usar juntos en clima frío o " +
+              "solo la exterior en clima templado.",
+          },
+          {
+            src: "https://www.hit-air.com/archives/005/202508/aba6fe55cc0fe9a95eaf30ea364aaad415f93499b892172e6158c73c5a2e35ed.jpg",
+            caption: "Forro térmico (liner) acolchado, con forro interior en tafetán.",
+          },
+        ],
+      },
+    ],
+    note: "No laves la chaqueta con el sistema airbag puesto. Retira el airbag y el forro térmico antes de lavarla. Revisa periódicamente que el cartucho de CO2 y la llave de resina no presenten grietas ni deformaciones; reemplázalos si detectas algún daño.",
+    tables: [
+      {
+        title: "Ficha técnica",
+        head: ["Especificación", "Detalle"],
+        rows: [
+          ["Color", "Gris Oscuro, Negro (disponibles en Colombia) · Gris Claro bajo pedido especial"],
+          ["Tallas disponibles en Colombia", "M, L (gris oscuro) · M (negro) — el modelo oficial va de S a 3XL bajo pedido"],
+          ["Cartucho CO2", "50cc"],
+          ["Peso", "2.8 kg (exterior: 2.3 kg · forro térmico: 500 g)"],
+          [
+            "Material",
+            "Exterior: ripstop 600D (poliéster) · Forro: malla de poliéster · Membrana interior: INTERON " +
+              "transpirable e impermeable (poliéster/poliuretano) · Tubo del airbag: poliuretano · Forro " +
+              "térmico: exterior acolchado (poliéster), forro interior tafetán (poliéster)",
+          ],
+          ["Certificación", "CE — EN1621-1, protectores HEXA en hombros y codos"],
+          ["Activación", "Mecánica, por cable en espiral (coiled wire) anclado a la moto"],
+          ["Opcionales", "Protector de pecho y protector de espalda CE (varios modelos disponibles bajo pedido)"],
+        ],
+        fine: "Especificaciones del fabricante (Hit-Air / Mugen Denko Co., Ltd.), sujetas a cambio sin previo aviso.",
+      },
+      {
+        title: "Tabla de tallas (cm)",
+        head: ["Talla", "Estatura", "Pecho", "Cintura"],
+        rows: [
+          ["S", "150–165", "80–88", "66–74"],
+          ["M", "160–175", "86–96", "72–80"],
+          ["L", "165–180", "95–105", "78–86"],
+          ["XL", "170–185", "95–110", "84–92"],
+          ["2XL", "175–190", "105–115", "90–98"],
+          ["3XL", "180–195", "110–120", "96–104"],
+        ],
+        fine: "Medidas de referencia del fabricante. Si estás entre dos tallas, escríbenos antes de comprar.",
+      },
+    ],
+  },
 }
 
 export default PRODUCT_DETAILS

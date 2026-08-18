@@ -1,9 +1,9 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Guía de Tallas | Ekivibes",
+  title: "Guía de Tallas | Hit-Air Colombia",
   description:
-    "Encuentra tu talla correcta para los chalecos airbag Hit-Air de equitación. Tablas de tallas por modelo con estatura, pecho y cintura.",
+    "Encuentra tu talla correcta para los chalecos y chaquetas airbag Hit-Air de motociclismo. Tablas de tallas por modelo con estatura, pecho y cintura.",
 }
 
 export default function GuiaDeTallas() {
@@ -12,7 +12,7 @@ export default function GuiaDeTallas() {
       <div className="ekv-page-header">
         <h1 className="ekv-page-title">Guía de Tallas</h1>
         <p className="ekv-page-subtitle">
-          Chalecos airbag Hit-Air para equitación — medidas en centímetros
+          Chalecos y chaquetas airbag Hit-Air para motociclismo — medidas en centímetros
         </p>
       </div>
 
@@ -20,20 +20,25 @@ export default function GuiaDeTallas() {
         <section className="ekv-page-section">
           <h2>¿Cómo tomar las medidas?</h2>
           <p>
-            Toma las medidas <strong>encima de tu ropa de equitación</strong>, no sobre ropa de calle.
-            Para la talla, considera primero tu <strong>estatura</strong> dentro del rango recomendado,
-            y luego verifica que el pecho y la cintura también entren. Si estás entre dos tallas,
-            escríbenos y te ayudamos a elegir.
+            Toma las medidas con la ropa que normalmente usas para conducir (camiseta o
+            capa liviana), no con chaquetas gruesas de invierno. Para la talla, considera
+            primero tu <strong>estatura</strong> dentro del rango recomendado, y luego
+            verifica que el <strong>pecho</strong> y la <strong>cintura</strong> también
+            entren. Si estás entre dos tallas, escríbenos y te ayudamos a elegir.
           </p>
           <p>
-            El chaleco debe quedar <strong>plano sobre el cuerpo</strong>, sin quedar muy ajustado
-            ni muy holgado. Un chaleco demasiado ajustado puede dañarse al inflarse.
+            La prenda debe quedar <strong>ajustada pero sin restringir el movimiento</strong>:
+            el sistema airbag necesita espacio para inflarse correctamente en caso de caída.
+            Una prenda demasiado ajustada puede dañarse o no proteger bien al activarse.
           </p>
         </section>
 
         <section className="ekv-page-section">
-          <h2>Chaleco Airbag VH (Juvenil / Adulto)</h2>
-          <p>Chaleco estilo gilet cerrado, el modelo más popular para equitación.</p>
+          <h2>Chaleco Airbag MLV2-RC</h2>
+          <p>
+            Chaleco tipo arnés para motociclismo con protector de espalda integrado y
+            material reflectante LUMIDEX. Certificado CE — EN1621-4:2013.
+          </p>
           <div className="ekv-table-wrap">
             <table className="ekv-table">
               <thead>
@@ -42,20 +47,23 @@ export default function GuiaDeTallas() {
                   <th>Estatura (cm)</th>
                   <th>Pecho (cm)</th>
                   <th>Cintura (cm)</th>
+                  <th>Cartucho CO2</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>S</td><td>150 – 165</td><td>80</td><td>60 – 80</td></tr>
-                <tr><td>M</td><td>160 – 180</td><td>85</td><td>70 – 90</td></tr>
-                <tr><td>L</td><td>175 – 190</td><td>90</td><td>85 – 105</td></tr>
+                <tr><td>M</td><td>160 – 185</td><td>86 – 110</td><td>72 – 94</td><td>60cc</td></tr>
+                <tr><td>L</td><td>175 – 195</td><td>105 – 120</td><td>84 – 105</td><td>60cc</td></tr>
               </tbody>
             </table>
           </div>
         </section>
 
         <section className="ekv-page-section">
-          <h2>Chaleco Airbag MLV3-H (Juvenil / Adulto)</h2>
-          <p>Chaleco tipo arnés con cinturón ajustable, mayor cobertura de protección.</p>
+          <h2>Chaqueta Airbag HDS-MS</h2>
+          <p>
+            Chaqueta tipo hoodie con capucha desmontable, protectores HEXA CE en hombros
+            y codos (EN1621-1), y sistema airbag desmontable. Estilo urbano deportivo.
+          </p>
           <div className="ekv-table-wrap">
             <table className="ekv-table">
               <thead>
@@ -67,64 +75,27 @@ export default function GuiaDeTallas() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td>XS</td><td>145 – 155</td><td>75</td><td>60 – 68</td></tr>
-                <tr><td>S</td><td>150 – 165</td><td>80</td><td>66 – 74</td></tr>
-                <tr><td>M</td><td>160 – 175</td><td>85</td><td>72 – 80</td></tr>
-                <tr><td>L</td><td>170 – 185</td><td>90</td><td>84 – 92</td></tr>
+                <tr><td>XS</td><td>150 – 165</td><td>80 – 88</td><td>66 – 74</td></tr>
+                <tr><td>S</td><td>160 – 175</td><td>86 – 96</td><td>72 – 80</td></tr>
+                <tr><td>M</td><td>165 – 180</td><td>95 – 105</td><td>78 – 86</td></tr>
+                <tr><td>L</td><td>170 – 185</td><td>95 – 110</td><td>84 – 92</td></tr>
+                <tr><td>XL</td><td>175 – 190</td><td>105 – 115</td><td>90 – 98</td></tr>
+                <tr><td>2XL</td><td>180 – 195</td><td>110 – 120</td><td>96 – 104</td></tr>
               </tbody>
             </table>
           </div>
-        </section>
-
-        <section className="ekv-page-section">
-          <h2>Chaleco Airbag VH Niños</h2>
-          <p>Talla única. Diseñado para niños en iniciación ecuestre.</p>
-          <div className="ekv-table-wrap">
-            <table className="ekv-table">
-              <thead>
-                <tr>
-                  <th>Talla</th>
-                  <th>Estatura (cm)</th>
-                  <th>Pecho (cm)</th>
-                  <th>Cintura (cm)</th>
-                  <th>Peso mínimo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>XS</td><td>125 – 135</td><td>65</td><td>50 – 55</td><td>18 kg</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section className="ekv-page-section">
-          <h2>Chaleco Airbag MLV3-H Niños</h2>
-          <p>Talla única. Mayor cobertura para niños, ideal para salto y cross.</p>
-          <div className="ekv-table-wrap">
-            <table className="ekv-table">
-              <thead>
-                <tr>
-                  <th>Talla</th>
-                  <th>Estatura (cm)</th>
-                  <th>Pecho (cm)</th>
-                  <th>Cintura (cm)</th>
-                  <th>Peso mínimo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>2XS</td><td>125 – 135</td><td>65</td><td>50 – 60</td><td>18 kg</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <p className="ekv-page-fine">
+            Talla M disponible en stock permanente. Tallas XS a 2XL bajo pedido especial.
+          </p>
         </section>
 
         <section className="ekv-page-section ekv-section-tip">
           <h2>Consejos para elegir bien</h2>
           <ul className="ekv-page-list">
             <li>Si tu pecho o cintura están en el límite superior de una talla, sube a la siguiente.</li>
-            <li>El chaleco no debe quedar ajustado al máximo: al inflarse necesita espacio.</li>
-            <li>Para niños en crecimiento, considera la talla siguiente si está cerca del límite de estatura.</li>
-            <li>¿Usas chaqueta gruesa en invierno? Toma las medidas con ella puesta.</li>
+            <li>La prenda no debe quedar ajustada al máximo: al inflarse el airbag necesita espacio.</li>
+            <li>¿Usas chaqueta o protección adicional debajo? Toma las medidas con ella puesta.</li>
+            <li>El cable en espiral (lanyard) se ajusta a tu posición de manejo independientemente de la talla del chaleco.</li>
           </ul>
         </section>
 

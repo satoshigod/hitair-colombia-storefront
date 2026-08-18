@@ -1,0 +1,27 @@
+name: fetch-eu7-images
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download raw EU-7 diagram images
+        run: |
+          mkdir -p public/product-details/raw-eu7
+          BASE="https://www.hit-air.com/archives/005/202508"
+          curl -sL "$BASE/dac3d8d22e797b6ae8868ef69af8a0c62258e580e3d7ea02034c1d04b0d56b69.jpg" -o public/product-details/raw-eu7/eu7-banner-details-raw.jpg
+          curl -sL "$BASE/e84ba6c405877a3a9eef80459bd376a328214be21a21dd664fccc0c80a5cda33.jpg" -o public/product-details/raw-eu7/eu7-banner-function-raw.jpg
+          curl -sL "$BASE/00d86dac894e2b86b556e459e9481566e04d7964d6b2193b01a33f9c05f7706c.jpg" -o public/product-details/raw-eu7/eu7-banner-airbag-raw.jpg
+          curl -sL "$BASE/74adb8111175f4ca4586279d2c246122b340758bb53d5b630583626fb951c76a.jpg" -o public/product-details/raw-eu7/eu7-banner-protector-raw.jpg
+      - name: Commit raw images
+        run: |
+          git config user.name "eu7-image-fetch-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/product-details/raw-eu7
+          git commit -m "Fetch raw EU-7 diagram images for ES translation" || echo "nothing to commit"
+          git push

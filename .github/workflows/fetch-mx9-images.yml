@@ -3,6 +3,9 @@ name: Fetch MX-9 Images
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   fetch-images:
     runs-on: ubuntu-latest

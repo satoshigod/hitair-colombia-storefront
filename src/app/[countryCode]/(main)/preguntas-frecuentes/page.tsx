@@ -1,9 +1,9 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Preguntas Frecuentes | Ekivibes",
+  title: "Preguntas Frecuentes | Hit-Air Colombia",
   description:
-    "Resolvemos tus dudas sobre los chalecos airbag Hit-Air para equitación: tallas, uso, recarga, mantenimiento y envíos en Colombia.",
+    "Resolvemos tus dudas sobre los chalecos airbag Hit-Air para moto y equitación: tallas, uso, recarga, mantenimiento y envíos en Colombia.",
 }
 
 const faqs = [
@@ -100,6 +100,39 @@ const faqs = [
     ],
   },
   {
+    categoria: "Uso en Moto",
+    preguntas: [
+      {
+        q: "¿El chaleco Hit-Air está homologado para uso en moto?",
+        a: "Sí. Los chalecos Hit-Air cumplen la norma europea EN 1621-4:2013, el estándar más exigente de homologación para airbags de protección tanto en moto como en equitación.",
+      },
+      {
+        q: "¿Cómo funciona el sistema de activación en moto?",
+        a: "El chaleco se conecta a la moto mediante un cable fijado al chasis, generalmente debajo del asiento del piloto. Ante una caída, la separación entre el piloto y la moto tensa el cable, lo que activa el mecanismo y despliega el airbag en cuestión de milisegundos. No tienes que hacer nada de forma manual.",
+      },
+      {
+        q: "¿Qué pasa si me olvido de desconectar el cable al bajarme de la moto?",
+        a: "No hay riesgo de activación accidental por descuido. El mecanismo requiere una fuerza de 25 a 30 kg para activarse, así que al bajarte sentirás resistencia en el cable antes de que se dispare, lo que te recuerda desconectarlo primero.",
+      },
+      {
+        q: "¿El cable puede dañar la pintura de mi moto por el roce?",
+        a: "No. El material del cable está diseñado para no dañar la pintura ni el lacado de la carrocería. Te recomendamos mantenerlo recogido bajo el asiento, o usar un conector adicional para que no quede colgando.",
+      },
+      {
+        q: "¿Dónde debo instalar el cable de conexión en mi moto?",
+        a: "El cable del piloto va bajo el asiento delantero, con el extremo de conexión centrado entre las piernas. Si llevas pasajero, su cable se instala bajo el asiento trasero, hacia el lado derecho o el centro, para que también le quede accesible.",
+      },
+      {
+        q: "¿Puedo usar el chaleco con mi chaqueta y equipo de moto habitual?",
+        a: "Sí. El chaleco Hit-Air debe llevarse como última prenda, por encima de tu chaqueta o cualquier otra equipación.",
+      },
+      {
+        q: "¿Es resistente al agua? ¿Puedo rodar bajo lluvia con el chaleco?",
+        a: "Sí, está fabricado para rodar bajo lluvia sin problema. Lo que no debes hacer es lavarlo a máquina ni sumergirlo, ya que el agua podría filtrarse al sistema y dañarlo.",
+      },
+    ],
+  },
+  {
     categoria: "Pedidos y Envíos",
     preguntas: [
       {
@@ -124,7 +157,7 @@ export default function FAQPage() {
       <div className="ekv-faq-header">
         <h1 className="ekv-faq-title">Preguntas Frecuentes</h1>
         <p className="ekv-faq-subtitle">
-          Todo lo que necesitas saber sobre los chalecos airbag Hit-Air para equitación
+          Todo lo que necesitas saber sobre los chalecos airbag Hit-Air para moto y equitación
         </p>
       </div>
 

@@ -119,13 +119,13 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         title: "Caja de llave y sistema de liberación",
         imgs: [
           {
-            src: "https://www.hit-air.com/archives/005/202407/d2f1b860790db7bf1bbb14e80ffa052f.jpg",
+            src: "/product-details/hdsms-keybox.jpg",
             caption:
               "Caja de llave (Key Box): aloja el cartucho de CO2 de 50cc y activa el airbag al desconectarse " +
               "el cable en espiral de la moto.",
           },
           {
-            src: "https://www.hit-air.com/archives/005/202407/349078635183fa5e63013fd72a493afe.jpg",
+            src: "/product-details/hdsms-keyboxcover.jpg",
             caption:
               "Cubierta de la caja de llave: diseño discreto que oculta el cartucho de CO2 y el orificio de " +
               "salida del conector tipo bola (keyball).",
@@ -136,34 +136,49 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         title: "Estructura del airbag",
         imgs: [
           {
-            src: "https://www.hit-air.com/archives/005/201912/9117c2fb526b8e382a3e521e467486b1.jpg",
+            src: "/product-details/hdsms-airbagstructure.jpg",
             caption:
               "Estructura interna del airbag: se despliega cubriendo cuello, hombros y espalda para absorber " +
               "el impacto en caso de caída.",
           },
+          {
+            src: "/product-details/hdsms-banner-airbag-es.jpg",
+            caption: "Zonas que cubre el airbag al inflarse, y los 3 colores de catálogo internacional (en Colombia vendemos negro).",
+          },
         ],
       },
       {
-        title: "Ficha visual de funciones",
+        title: "Detalle de partes y ajustes",
         imgs: [
           {
-            src: "https://www.hit-air.com/archives/005/202407/a6c0db50f1d18b5bda64f5518a2b61e7.jpg",
+            src: "/product-details/hdsms-banner-details.jpg",
             caption:
-              "Vista general del producto: capucha desmontable, ajustador de brazo, cordón de ajuste y " +
-              "ventilación trasera.",
+              "Guardacuello de neoprene, capucha desmontable por cremallera y velcro, ajustador de brazo, " +
+              "ajustador de puño con velcro, conector de un toque (hembra) y cordón de ajuste en la cintura.",
           },
+        ],
+      },
+      {
+        title: "Cable en espiral, tela, reflectivos y capucha",
+        imgs: [
           {
-            src: "https://www.hit-air.com/archives/005/202407/28b3e4dfd7aa4c600c3bc0c972c9f8da.jpg",
+            src: "/product-details/hdsms-banner-function.jpg",
             caption:
-              "Cable en espiral, ventilación, material reflectante y capucha — funciones clave de la chaqueta.",
+              "Cable en espiral incluido (se fija a la moto), tela de malla con brillo metálico y gran " +
+              "transpirabilidad, impresión reflectiva para visibilidad nocturna, capucha desmontable por " +
+              "cremallera y velcro, e ilustración del despliegue del airbag.",
           },
+        ],
+      },
+      {
+        title: "Protectores CE",
+        imgs: [
           {
-            src: "https://www.hit-air.com/archives/005/202407/583c73b7c3337b7eff8f50c521434c5e.jpg",
-            caption: "Zonas de protección al inflarse el airbag.",
-          },
-          {
-            src: "https://www.hit-air.com/archives/005/202311/843261c997b02538d4b8d9fe24bbb337.jpg",
-            caption: "Protectores HEXA CE en hombros y codos, más protector de espalda.",
+            src: "/product-details/hdsms-banner-protector.jpg",
+            caption:
+              "Protectores HEXA de hombro y codo, certificados CE bajo EN1621-1, estructura tipo panal en " +
+              "polipropileno y polietileno, livianos. Incluyen de fábrica protector de espalda blando; " +
+              "protector de pecho y espalda rígida CE son opcionales (se sujetan con velcro por dentro).",
           },
         ],
       },
@@ -186,7 +201,7 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         fine: "Especificaciones del fabricante (Hit-Air / Mugen Denko Co., Ltd.), sujetas a cambio sin previo aviso.",
       },
       {
-        title: "Tabla de tallas (cm)",
+        title: "Talla según tu cuerpo (guía de compra)",
         head: ["Talla", "Estatura", "Pecho", "Cintura"],
         rows: [
           ["XS", "150–165", "80–88", "66–74"],
@@ -196,7 +211,19 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
           ["XL", "175–190", "105–115", "90–98"],
           ["2XL", "180–195", "110–120", "96–104"],
         ],
-        fine: "Medidas de referencia del fabricante. Si estás entre dos tallas, escríbenos antes de comprar.",
+        fine: "Úsala si nunca te has probado la chaqueta: compara tu estatura, pecho y cintura contra la tabla.",
+      },
+      {
+        title: "Medidas de la prenda (guía de comparación)",
+        img: "/product-details/hdsms-sizediagram-es.jpg",
+        head: ["Talla", "Largo delantero", "Largo espalda", "Hombro", "Pecho", "Manga", "Cintura"],
+        rows: [
+          ["M", "68 cm", "70 cm", "48 cm", "112 cm", "63 cm", "108 cm"],
+        ],
+        fine:
+          "Medidas de la prenda ya armada, tomada plana (no de tu cuerpo). Úsala si quieres comparar contra " +
+          "una chaqueta que ya tienes. Solo tenemos la talla M medida; las demás tallas escalan proporcionalmente " +
+          "según el diagrama — escríbenos si necesitas el detalle exacto de otra talla.",
       },
     ],
   },

@@ -239,6 +239,51 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
           "El sistema de airbag es desmontable de la chaqueta.",
       },
       {
+        title: "Ficha visual completa (partes de la chaqueta)",
+        imgs: [
+          {
+            src: "/product-details/mx9-banner-details-es.jpg",
+            caption:
+              "Todas las partes: protector de cuello, malla de aire, estampado reflectivo, cubierta de la caja " +
+              "de llave, ajustador de brazo, almohadilla EVA, airbag de cadera, ajuste de puños y velcros para " +
+              "las almohadillas opcionales de pecho y espalda.",
+          },
+        ],
+      },
+      {
+        title: "Cable en espiral, malla y reflectivos",
+        imgs: [
+          {
+            src: "/product-details/mx9-banner-function-es.jpg",
+            caption:
+              "Cómo funciona el cable en espiral que activa el airbag, la tela de malla densa y transpirable, " +
+              "el estampado reflectivo para visibilidad nocturna, y el detalle de la cubierta del airbag de cuello.",
+          },
+        ],
+      },
+      {
+        title: "Zonas cubiertas al inflarse",
+        imgs: [
+          {
+            src: "/product-details/mx9-banner-airbag-es.jpg",
+            caption:
+              "El airbag cubre cuello, pecho, espalda, laterales y cadera. Debajo, la chaqueta en los 3 colores " +
+              "del catálogo internacional (gris oscuro, negro y gris claro) — en Colombia la vendemos en negro.",
+          },
+        ],
+      },
+      {
+        title: "Protectores CE HEXA",
+        imgs: [
+          {
+            src: "/product-details/mx9-banner-protector-es.jpg",
+            caption:
+              "Hombreras y coderas CE (EN1621-1) tipo HEXA, en polipropileno y polietileno: livianas y con buena " +
+              "ventilación. Protector de espalda blando incluido de serie como equipo estándar.",
+          },
+        ],
+      },
+      {
         title: "Caja de llave (Key Box)",
         imgs: [
           {

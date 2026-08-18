@@ -200,6 +200,87 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
       },
     ],
   },
+  "hitair-mx9-jacket-black": {
+    sections: [
+      {
+        title: "Chaqueta tipo malla, diseño deportivo",
+        imgs: [],
+        text:
+          "Chaqueta airbag de malla con diseño deportivo y reflectivos en varias zonas para mayor visibilidad " +
+          "nocturna. Tela exterior combina malla brillante y nylon mate, resistente y transpirable. Trae de serie " +
+          "protectores CE (EN1621-1) tipo HEXA, livianos, en hombros y codos, más protector de espalda blando. " +
+          "El sistema de airbag es desmontable de la chaqueta.",
+      },
+      {
+        title: "Caja de llave (Key Box)",
+        imgs: [
+          {
+            src: "/product-details/mx9-det3.jpg",
+            caption:
+              "Caja de llave con cartucho de CO2 de 50cc alojado en un compartimento discreto, con salida en 3D " +
+              "para el conector de la llave de resina.",
+          },
+        ],
+      },
+      {
+        title: "Sistema de protección por airbag",
+        imgs: [
+          {
+            src: "/product-details/mx9-det4.jpg",
+            caption:
+              "Zonas cubiertas al inflarse: cuello, pecho —con una extensión que baja hasta la cadera, de ahí el " +
+              "nombre del modelo ('Packing the hip air cushion')— y espalda completa.",
+          },
+          {
+            src: "/product-details/mx9-det6.jpg",
+            caption:
+              "Airbag desplegado (foto de referencia en gris oscuro; el funcionamiento es igual en la versión negra).",
+          },
+        ],
+      },
+      {
+        title: "Espalda con protector integrado",
+        imgs: [
+          {
+            src: "/product-details/mx9-det2.jpg",
+            caption:
+              "Espalda con el sistema Hit-Air Airbag integrado y protector de espalda blando incluido de serie.",
+          },
+        ],
+      },
+    ],
+    note: "No laves el airbag. Retira el sistema airbag de la chaqueta antes de lavarla. Revisa periódicamente que el cartucho de CO2 y la llave de resina no presenten grietas ni deformaciones; reemplázalos si detectas algún daño.",
+    tables: [
+      {
+        title: "Ficha técnica",
+        head: ["Especificación", "Detalle"],
+        rows: [
+          ["Color", "Negro (también disponible en gris oscuro y gris claro en el catálogo internacional)"],
+          ["Tallas", "S, M, L, XL, 2XL, 3XL (edición inicial Colombia: M)"],
+          ["Cartucho CO2", "50cc"],
+          ["Peso", "2 kg"],
+          ["Material", "Exterior: nylon y poliéster · Forro: malla de poliéster · Tubo del airbag: poliuretano"],
+          ["Protectores", "CE (EN1621-1) HEXA en hombros y codos + protector de espalda blando, de serie"],
+          ["Activación", "Mecánica, por cable en espiral (coiled wire) anclado a la moto"],
+          ["Opcionales", "Forro interior impermeable/cortavientos B-Liner7, protector de pecho, protector de espalda CE"],
+        ],
+        fine: "Especificaciones del fabricante (Hit-Air / Mugen Denko Co., Ltd.), sujetas a cambio sin previo aviso.",
+      },
+      {
+        title: "Tabla de tallas (cm)",
+        head: ["Talla", "Estatura", "Pecho", "Cintura"],
+        rows: [
+          ["S", "160–175", "86–96", "72–80"],
+          ["M", "165–180", "95–105", "78–86"],
+          ["L", "170–185", "100–110", "84–92"],
+          ["XL", "175–190", "105–115", "90–98"],
+          ["2XL", "180–195", "110–120", "96–104"],
+          ["3XL", "180–195", "115–125", "102–110"],
+        ],
+        fine: "Medidas de referencia del fabricante. Si estás entre dos tallas, escríbenos antes de comprar.",
+      },
+    ],
+  },
 }
 
 export default PRODUCT_DETAILS

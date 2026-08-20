@@ -14,6 +14,8 @@ import { Locale } from "@lib/data/locales"
 const SideMenuItems = {
   Inicio: "/",
   Tienda: "/store",
+  "Chaquetas y Chalecos": "/categories/chaquetas-y-chalecos-moto",
+  Accesorios: "/categories/accesorios-moto",
   Cuenta: "/account",
   Carrito: "/cart",
 }

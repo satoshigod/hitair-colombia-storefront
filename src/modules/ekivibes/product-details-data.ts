@@ -15,6 +15,494 @@ export type ProductDetail = {
 }
 
 const PRODUCT_DETAILS: Record<string, ProductDetail> = {
+  "protector-espalda-ce-ym-hitair": {
+    sections: [
+      {
+        title: "Va dentro del bolsillo trasero de la prenda",
+        imgs: [
+          {
+            src: "/product-details/pad-back-ym-05.jpg",
+            caption: "Bolsillo trasero abierto: aquí se retira el acolchado blando de fábrica.",
+          },
+          {
+            src: "/product-details/pad-back-ym-06.jpg",
+            caption: "La espaldera CE ocupa el mismo espacio, sin herrajes ni costuras adicionales.",
+          },
+        ],
+        text:
+          "La instalación no requiere herramientas ni modificar la prenda. Se saca el acolchado suave " +
+          "original, se inserta esta espaldera en su lugar y se cierra el bolsillo. La prenda conserva " +
+          "su corte y su peso apenas cambia.",
+      },
+      {
+        title: "Memory Elastan: recupera su forma después del golpe",
+        imgs: [
+          {
+            src: "/product-details/pad-back-ym-04.jpg",
+            caption: "El material se dobla con la mano y vuelve solo a su forma original.",
+          },
+        ],
+        text:
+          "A diferencia de las espumas que se aplastan de forma permanente, el Memory Elastan es un " +
+          "material con memoria de forma: absorbe la energía del impacto y se recompone. Eso significa " +
+          "que sigue protegiendo después del primer golpe. El perforado del cuerpo mantiene la " +
+          "circulación de aire en clima caliente.",
+      },
+    ],
+    note:
+      "Antes de instalarla, verifica que tu chaleco o chaqueta Hit-Air tenga bolsillo trasero para " +
+      "espaldera. Si tu prenda sujeta el protector con velcro en lugar de bolsillo, necesitas la " +
+      "versión con funda de velcro.",
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Norma", "CE EN1621-2 Nivel 2"],
+          ["Medidas", "255 mm ancho × 395 mm alto × 18 mm espesor"],
+          ["Peso", "390 g"],
+          ["Material", "Poliuretano (Memory Elastan)"],
+          ["Color", "Amarillo"],
+          ["Sujeción", "Bolsillo trasero de la prenda"],
+        ],
+        fine: "Nivel 2 es el grado más alto de la norma EN1621-2 para protectores dorsales. Especificaciones sujetas a cambio por el fabricante.",
+      },
+    ],
+  },
+
+  "protector-espalda-ce-ym-funda-velcro-hitair": {
+    sections: [
+      {
+        title: "Funda de velcro: se adhiere al forro de la prenda",
+        imgs: [
+          {
+            src: "/product-details/pad-back-ymcv-03.jpg",
+            caption: "La funda se abre para extraer el protector cuando hay que lavar la prenda.",
+          },
+          {
+            src: "/product-details/pad-back-ymcv-02.jpg",
+            caption: "Cara posterior en malla transpirable, con las bandas de velcro de sujeción.",
+          },
+        ],
+        text:
+          "Esta es la diferencia con la versión desnuda: en lugar de alojarse en un bolsillo, se pega " +
+          "directamente al velcro hembra del forro trasero. Es la opción correcta si tu prenda no tiene " +
+          "bolsillo para espaldera.",
+      },
+      {
+        title: "Montada en la prenda",
+        imgs: [
+          {
+            src: "/product-details/pad-back-ymcv-04.jpg",
+            caption: "Instalada en un chaleco de la serie MLV.",
+          },
+          {
+            src: "/product-details/pad-back-ymcv-05.jpg",
+            caption: "Montada sobre un arnés tipo Harness-B.",
+          },
+        ],
+        text:
+          "Compatible con modelos como MLV-C, VHR y los arneses Harness-B. El cuerpo protector es el " +
+          "mismo Memory Elastan certificado Nivel 2 de la versión sin funda.",
+      },
+    ],
+    note:
+      "Si tu prenda tiene bolsillo trasero en lugar de velcro, la versión sin funda es más liviana y " +
+      "queda mejor ajustada.",
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Norma", "CE EN1621-2 Nivel 2"],
+          ["Medidas", "255 mm ancho × 395 mm alto × 18 mm espesor"],
+          ["Peso", "430 g"],
+          ["Material funda", "Nylon Ripstop y malla de poliéster"],
+          ["Material cuerpo", "Poliuretano (Memory Elastan)"],
+          ["Color", "Funda negra / cuerpo amarillo"],
+          ["Sujeción", "Velcro sobre el forro trasero"],
+        ],
+        fine: "Especificaciones sujetas a cambio por el fabricante.",
+      },
+    ],
+  },
+
+  "protector-pecho-ce-asc-hitair": {
+    sections: [
+      {
+        title: "Cómo queda instalado",
+        imgs: [
+          {
+            src: "/product-details/pad-chest-asc-05.jpg",
+            caption: "Las dos piezas alojadas en los bolsillos pectorales de la chaqueta.",
+          },
+          {
+            src: "/product-details/pad-chest-asc-06.jpg",
+            caption: "Desde fuera no altera el corte de la prenda.",
+          },
+        ],
+        text:
+          "El airbag cubre el tórax con una cámara de aire; estos protectores agregan encima una barrera " +
+          "rígida certificada. Se instalan en los bolsillos pectorales de los modelos que los traen, " +
+          "como MLV2-H, MLV2P y MX-9.",
+      },
+      {
+        title: "Cuerpo perforado que reparte el impacto",
+        imgs: [
+          {
+            src: "/product-details/pad-chest-asc-04.jpg",
+            caption: "Estructura perforada en polietileno, flexible al doblarla con la mano.",
+          },
+        ],
+        text:
+          "La perforación cumple dos funciones: deja circular el aire y permite que la pieza se flexione " +
+          "para adaptarse al pecho. Al recibir un golpe, la superficie amplia reparte la energía en lugar " +
+          "de concentrarla en un punto.",
+      },
+    ],
+    note:
+      "Se venden siempre como juego de dos piezas, izquierda y derecha. Verifica que tu prenda tenga " +
+      "bolsillos pectorales antes de comprar.",
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Presentación", "Par (2 unidades)"],
+          ["Medidas por pieza", "160 mm ancho × 226 mm alto × 17 mm espesor"],
+          ["Peso", "300 g el juego completo"],
+          ["Material", "Cuerpo en polietileno, cubierta en poliéster"],
+          ["Color", "Negro"],
+          ["Compatibilidad", "MLV2-H, MLV2P, MX-9 y otros modelos con bolsillo pectoral"],
+        ],
+        fine: "Especificaciones sujetas a cambio por el fabricante.",
+      },
+    ],
+  },
+
+  "protector-pecho-hc-hitair": {
+    sections: [
+      {
+        title: "Cómo queda instalado",
+        imgs: [
+          {
+            src: "/product-details/pad-chest-hc-04.jpg",
+            caption: "Montado sobre un arnés Hit-Air con anclaje pectoral.",
+          },
+          {
+            src: "/product-details/pad-chest-hc-05.jpg",
+            caption: "Bajo una chaqueta de uso diario.",
+          },
+          {
+            src: "/product-details/pad-chest-hc-06.jpg",
+            caption: "En un chaleco airbag, cubriendo esternón y costillas.",
+          },
+        ],
+        text:
+          "Se monta en los arneses y chalecos Hit-Air que tienen anclaje pectoral, como Harness, MC5, " +
+          "MLV-C y HS3, y trabaja junto al airbag: la cámara de aire amortigua, la pieza rígida distribuye.",
+      },
+      {
+        title: "La opción más liviana del catálogo",
+        imgs: [
+          {
+            src: "/product-details/pad-chest-hc-03.jpg",
+            caption: "Marcado CE impreso en la pieza.",
+          },
+        ],
+        text:
+          "190 gramos entre las dos piezas. La estructura en panal de polipropileno y EVA sobre malla de " +
+          "poliéster se flexiona con el cuerpo en vez de comportarse como una placa rígida, lo que la hace " +
+          "cómoda para uso urbano diario y para clima caliente.",
+      },
+    ],
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Presentación", "Par (2 unidades)"],
+          ["Medidas", "275 mm ancho × 226 mm alto"],
+          ["Peso", "190 g"],
+          ["Material", "Polipropileno, EVA y malla de poliéster"],
+          ["Color", "Negro"],
+          ["Compatibilidad", "Harness, MC5, MLV-C, HS3 y otros con anclaje pectoral"],
+        ],
+        fine: "Especificaciones sujetas a cambio por el fabricante.",
+      },
+    ],
+  },
+
+  "soporte-conector-tipo-hebilla-hitair": {
+    sections: [
+      {
+        title: "Se fija a la moto y ancla el cable",
+        imgs: [
+          {
+            src: "/product-details/conn-holder-02.jpg",
+            caption: "El soporte con su cinta de sujeción, lista para montar en el chasis.",
+          },
+          {
+            src: "/product-details/conn-holder-03.jpg",
+            caption: "Detalle del conector tipo hebilla en su posición de anclaje.",
+          },
+        ],
+        text:
+          "Se instala con la cinta incluida sobre el chasis, el subchasis o el punto firme que mejor " +
+          "funcione en tu moto. No requiere perforar ni modificar nada.",
+      },
+      {
+        title: "Por qué importa el ángulo",
+        imgs: [
+          {
+            src: "/product-details/conn-holder-main.jpg",
+            caption: "Versión 2025 del soporte original Hit-Air.",
+          },
+        ],
+        text:
+          "El sistema se activa cuando el piloto se separa de la moto y el cable hace tensión. Si el " +
+          "conector queda suelto o trabaja torcido, esa tensión no se transmite igual. El soporte lo " +
+          "mantiene siempre en la misma posición y en el ángulo correcto, y de paso vuelve el gesto de " +
+          "engancharse y desengancharse cosa de un segundo.",
+      },
+    ],
+    note: "No incluye el cable en espiral, que se vende por separado.",
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Tipo", "Conector de hebilla con soporte"],
+          ["Versión", "2025"],
+          ["Montaje", "Cinta de sujeción incluida"],
+          ["Uso", "Motociclismo"],
+          ["Incluye cable", "No"],
+        ],
+        fine: "Especificaciones sujetas a cambio por el fabricante.",
+      },
+    ],
+  },
+
+  "set-herramientas-key-box-tipo-b-hitair": {
+    sections: [
+      {
+        title: "Contenido del set",
+        imgs: [
+          {
+            src: "/product-details/tool-set-main.jpg",
+            caption: "Perno de ajuste y llave hexagonal para Key Box tipo B.",
+          },
+        ],
+        text:
+          "Cuando el airbag se activa hay que rearmar el sistema: recolocar el cartucho de CO2 y volver a " +
+          "ajustar el perno de la Key Box. Estas son exactamente las dos piezas que se necesitan para eso. " +
+          "También es la herramienta del mantenimiento periódico y el repuesto si el perno se pierde o se " +
+          "pasa de rosca.",
+      },
+    ],
+    note:
+      "Verifica el tipo de Key Box de tu prenda antes de comprar: este set es para el tipo B. El tipo Y " +
+      "usa un juego distinto.",
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Contenido", "1 perno de ajuste + 1 llave hexagonal"],
+          ["Compatible con", "Key Box tipo B"],
+          ["Segmentos", "Equitación y motociclismo"],
+        ],
+        fine: "Especificaciones sujetas a cambio por el fabricante.",
+      },
+    ],
+  },
+
+  "hitair-coiled-wire-moto": {
+    sections: [
+      {
+        title: "Cómo se conecta",
+        imgs: [
+          {
+            src: "/product-details/coiled-wire-moto-02.jpg",
+            caption: "Un extremo va al soporte anclado a la moto.",
+          },
+          {
+            src: "/product-details/coiled-wire-moto-03.jpg",
+            caption: "El otro extremo conecta con la llave que va en la Key Box de la prenda.",
+          },
+        ],
+        text:
+          "El cable en espiral es el vínculo mecánico entre el piloto y la moto. Si el piloto sale " +
+          "despedido, la tensión del cable libera la llave de la Key Box y el airbag se infla. Todo el " +
+          "sistema es mecánico: no lleva electrónica ni baterías.",
+      },
+      {
+        title: "Pieza de desgaste",
+        imgs: [
+          {
+            src: "/product-details/coiled-wire-moto-main.jpg",
+            caption: "Cable en espiral de repuesto, versión para motociclismo.",
+          },
+        ],
+        text:
+          "Es la pieza del sistema que más trabajo mecánico acumula, porque se estira y se recoge en cada " +
+          "subida y bajada de la moto. Conviene revisarla con regularidad y reemplazarla cuando el resorte " +
+          "pierda capacidad de recuperación o el forro se agriete.",
+      },
+    ],
+    note:
+      "Revisa el cable antes de cada salida. Un cable dañado puede impedir que el sistema se active en " +
+      "una caída.",
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Tipo", "Cable en espiral (coiled wire)"],
+          ["Uso", "Motociclismo"],
+          ["Activación", "Mecánica, sin electrónica"],
+          ["Función", "Repuesto del cable de conexión piloto–moto"],
+        ],
+        fine: "Especificaciones sujetas a cambio por el fabricante.",
+      },
+    ],
+  },
+
+  "cartucho-de-co2-hit-air-50cc": {
+    sections: [
+      {
+        title: "Verifica la cilindrada de tu prenda",
+        imgs: [
+          {
+            src: "/product-details/co2-comparativa.jpg",
+            caption: "Comparación de tamaños entre el cartucho de 50cc y el de 60cc.",
+          },
+        ],
+        text:
+          "El 50cc es el que usan los modelos de talla pequeña e infantil, y también algunas chaquetas de " +
+          "moto como la EU7. Cada prenda indica su cilindrada; montar una distinta a la especificada cambia " +
+          "la presión de inflado.",
+      },
+      {
+        title: "Se reemplaza después de cada activación",
+        imgs: [
+          {
+            src: "/product-details/co2-50cc-main.jpg",
+            caption: "Cartucho de 50cc, repuesto original Hit-Air.",
+          },
+        ],
+        text:
+          "Cuando el airbag se infla, el cartucho queda vacío. Hasta que no montes uno nuevo, la prenda no " +
+          "vuelve a funcionar. Se rosca a mano en la Key Box, sin herramientas.",
+      },
+    ],
+    note:
+      "Contiene gas a alta presión. No lo perfores, no lo expongas al calor y ten en cuenta que las " +
+      "aerolíneas restringen su transporte.",
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Cilindrada", "50 cc"],
+          ["Gas", "CO2 comprimido"],
+          ["Instalación", "Roscado manual en la Key Box"],
+          ["Uso típico", "Tallas pequeñas, modelos infantiles y chaqueta EU7"],
+        ],
+        fine: "Confirma siempre la cilindrada indicada en tu prenda antes de comprar.",
+      },
+    ],
+  },
+
+  "cartucho-de-co2-hit-air-60cc": {
+    sections: [
+      {
+        title: "Verifica la cilindrada de tu prenda",
+        imgs: [
+          {
+            src: "/product-details/co2-comparativa.jpg",
+            caption: "Comparación de tamaños entre el cartucho de 50cc y el de 60cc.",
+          },
+        ],
+        text:
+          "El 60cc es la cilindrada de los modelos de talla adulta, como la serie MLV y los VH de adulto. " +
+          "Cada prenda indica cuál le corresponde; usar una distinta cambia la presión de inflado.",
+      },
+      {
+        title: "Se reemplaza después de cada activación",
+        imgs: [
+          {
+            src: "/product-details/co2-60cc-main.jpg",
+            caption: "Cartucho de 60cc, repuesto original Hit-Air.",
+          },
+        ],
+        text:
+          "Tras el inflado el cartucho queda vacío y la prenda no vuelve a activarse hasta que se monte " +
+          "uno nuevo. Se rosca a mano en la Key Box, sin herramientas.",
+      },
+    ],
+    note:
+      "Contiene gas a alta presión. No lo perfores, no lo expongas al calor y ten en cuenta que las " +
+      "aerolíneas restringen su transporte.",
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Cilindrada", "60 cc"],
+          ["Gas", "CO2 comprimido"],
+          ["Instalación", "Roscado manual en la Key Box"],
+          ["Uso típico", "Tallas adulto, serie MLV y VH adulto"],
+        ],
+        fine: "Confirma siempre la cilindrada indicada en tu prenda antes de comprar.",
+      },
+    ],
+  },
+
+  "llave-bola-conector-hebilla-tipo-b-hitair": {
+    sections: [
+      {
+        title: "Dónde va la llave de bola",
+        imgs: [
+          {
+            src: "/product-details/keyball-set-b-keybox-es.jpg",
+            caption: "La llave se inserta en la Key Box, en la parte trasera superior de la prenda.",
+          },
+        ],
+        text:
+          "Al insertarla queda firme dentro del mecanismo. Si el usuario cae y el cable en espiral hace " +
+          "tensión, la llave se libera de la Key Box y dispara el inflado. Después de instalarla, haz una " +
+          "prueba de tensión suave para confirmar que se libera correctamente.",
+      },
+      {
+        title: "Set de repuesto completo",
+        imgs: [
+          {
+            src: "/product-details/keyball-set-b-main.jpg",
+            caption: "Llave de bola metálica y hebilla conectora hembra tipo B.",
+          },
+        ],
+        text:
+          "Reemplaza el conjunto llave–hebilla cuando se daña, se desgasta o se pierde. Sirve para prendas " +
+          "de equitación y de motociclismo que usen sistema de hebilla.",
+      },
+    ],
+    note: "No incluye el cable en espiral, que se vende por separado.",
+    tables: [
+      {
+        title: "Especificaciones",
+        head: ["Característica", "Detalle"],
+        rows: [
+          ["Contenido", "1 llave de bola + 1 hebilla conectora hembra"],
+          ["Tipo", "B (sistema de hebilla)"],
+          ["Segmentos", "Equitación y motociclismo"],
+          ["Incluye cable", "No"],
+        ],
+        fine: "Especificaciones sujetas a cambio por el fabricante.",
+      },
+    ],
+  },
+
   "hitair-mlv2-rc-vest-black": {
     sections: [
       {
@@ -479,3 +967,4 @@ const PRODUCT_DETAILS: Record<string, ProductDetail> = {
 }
 
 export default PRODUCT_DETAILS
+

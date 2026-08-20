@@ -9,13 +9,19 @@ import CartMenu from "@modules/ekivibes/cart-menu"
 // EQUITATION / MOTO en el nav). No se muestra catalogo ecuestre aqui.
 const EQUITACION_URL = "https://ekivibes-storefront-production.up.railway.app/co/equitacion"
 
+// Handles de las categorias en Medusa (exclusivas del canal Hit-Air Colombia).
+// Mismo patron de separacion que usa el nav de Ekivibes, donde "Airbags" y
+// "Accesorios" apuntan directo a /categories/<handle>.
+const CAT_CHAQUETAS = "/categories/chaquetas-y-chalecos-moto"
+const CAT_ACCESORIOS = "/categories/accesorios-moto"
+
 export default function Nav() {
   return (
     <header>
       <div className="topbar">
         <span>Envio a toda Colombia</span>
         <span>Distribuidor exclusivo Hit-Air en Colombia</span>
-        <span>Fabricado en Japon · Certificacion CE</span>
+        <span>Fabricado en Japon &middot; Certificacion CE</span>
       </div>
       <nav className="nav">
         <LocalizedClientLink href="/" className="logo">
@@ -24,6 +30,8 @@ export default function Nav() {
         </LocalizedClientLink>
         <div className="nav-menu">
           <LocalizedClientLink href="/store">Catalogo</LocalizedClientLink>
+          <LocalizedClientLink href={CAT_CHAQUETAS}>Chaquetas y Chalecos</LocalizedClientLink>
+          <LocalizedClientLink href={CAT_ACCESORIOS}>Accesorios</LocalizedClientLink>
           <LocalizedClientLink href="/acerca-de-hit-air">Tecnologia</LocalizedClientLink>
           <LocalizedClientLink href="/preguntas-frecuentes">FAQ</LocalizedClientLink>
           <a href={EQUITACION_URL} className="nav-crosslink">

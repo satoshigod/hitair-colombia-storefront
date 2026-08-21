@@ -1,0 +1,69 @@
+name: Fetch Hit-Air Official Manuals
+
+# Descarga los manuales oficiales de usuario publicables en el sitio.
+# Solo se traen los PDF que vienen en UN SOLO archivo y en orden de lectura.
+# Las carpetas por idioma del directorio oficial contienen imposiciones de
+# imprenta (pliegos tipo "B-F,2-25"), que no sirven para lectura en pantalla.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils wget
+
+      - name: Descargar manuales
+        run: |
+          set -e
+          BASE="https://www.hit-air.com/for_shop_support/hit-air_Manual_data"
+          mkdir -p /tmp/man
+          cd /tmp/man
+          # Manual sistema airbag MOTO — Espanol (2021, archivo unico)
+          wget -q --user-agent="Mozilla/5.0" \
+            "$BASE/hit-air_manual_MC-AIO-B-SP20210511.pdf" \
+            -O manual-moto-airbag-es.pdf
+          # Manual sistema airbag EQUITACION — Ingles (archivo unico)
+          wget -q --user-agent="Mozilla/5.0" \
+            "$BASE/hr-aio-y/manual_hr-aio-y-e.pdf" \
+            -O manual-equitacion-airbag-en.pdf
+          ls -la
+
+      - name: Verificar integridad y extraer metadatos
+        run: |
+          cd /tmp/man
+          for f in *.pdf; do
+            echo "=== $f ==="
+            pdfinfo "$f" | grep -E '^(Pages|Page size|Encrypted|File size)' || true
+            # Un PDF valido debe empezar por %PDF
+            head -c 4 "$f" | grep -q '%PDF' && echo "  cabecera PDF OK" || { echo "  ARCHIVO INVALIDO"; exit 1; }
+          done
+
+      - name: Publicar en public/descargas
+        run: |
+          mkdir -p public/descargas
+          cp /tmp/man/*.pdf public/descargas/
+          ls -la public/descargas
+          du -sh public/descargas
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/descargas
+          if git diff --staged --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "chore(descargas): manuales oficiales de usuario Hit-Air"
+            git pull --rebase --autostash
+            git push
+          fi

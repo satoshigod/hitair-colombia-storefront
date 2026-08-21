@@ -1,0 +1,112 @@
+name: Index Hit-Air Shop Support Tree
+
+# Recorre recursivamente https://www.hit-air.com/for_shop_support/ y produce
+# un inventario completo (ruta, tamano, fecha) SIN descargar los binarios.
+# Sirve para decidir que material oficial vale la pena traer al storefront.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq wget python3
+
+      - name: Espejar solo el arbol de directorios
+        run: |
+          mkdir -p /tmp/idx
+          cd /tmp/idx
+          # --spider recorre sin guardar binarios; guardamos los index.html
+          wget -q -r -np -nH --cut-dirs=1 -l 6 \
+            --user-agent="Mozilla/5.0" \
+            --accept-regex '/$|index\.html' \
+            --reject-regex '\?C=' \
+            https://www.hit-air.com/for_shop_support/ || true
+          echo "=== index.html capturados ==="
+          find . -name 'index.html*' | wc -l
+
+      - name: Construir inventario
+        run: |
+          python3 - <<'PY'
+          import os, re, html, json
+          rows = []
+          for dirpath, _, files in os.walk('/tmp/idx'):
+              for fn in files:
+                  if not fn.startswith('index.html'):
+                      continue
+                  full = os.path.join(dirpath, fn)
+                  rel = os.path.relpath(dirpath, '/tmp/idx')
+                  try:
+                      src = open(full, encoding='utf-8', errors='replace').read()
+                  except Exception:
+                      continue
+                  # filas del autoindex de Apache
+                  pat = re.compile(
+                      r'<a href="([^"?][^"]*)">([^<]+)</a>\s*</td>'
+                      r'\s*<td[^>]*>\s*([0-9\-]{10}\s[0-9:]{5})\s*</td>'
+                      r'\s*<td[^>]*>\s*([^<]+?)\s*</td>', re.I)
+                  for href, name, mod, size in pat.findall(src):
+                      if href.startswith(('/', 'http')) or name.strip() == 'Parent Directory':
+                          continue
+                      path = os.path.normpath(os.path.join(rel, href)).lstrip('./')
+                      rows.append({
+                          'path': path,
+                          'is_dir': href.endswith('/'),
+                          'modified': mod.strip(),
+                          'size': size.strip(),
+                      })
+          seen, uniq = set(), []
+          for r in sorted(rows, key=lambda x: x['path']):
+              if r['path'] in seen:
+                  continue
+              seen.add(r['path'])
+              uniq.append(r)
+
+          os.makedirs('docs/hit-air-oficial', exist_ok=True)
+          with open('docs/hit-air-oficial/inventario.json', 'w') as f:
+              json.dump(uniq, f, indent=2, ensure_ascii=False)
+
+          dirs = [r for r in uniq if r['is_dir']]
+          fls  = [r for r in uniq if not r['is_dir']]
+          with open('docs/hit-air-oficial/INVENTARIO.md', 'w') as f:
+              f.write('# Inventario oficial: hit-air.com/for_shop_support\n\n')
+              f.write('Generado automaticamente. Base URL:\n')
+              f.write('`https://www.hit-air.com/for_shop_support/`\n\n')
+              f.write(f'- Carpetas: {len(dirs)}\n- Archivos: {len(fls)}\n\n')
+              cur = None
+              for r in fls:
+                  d = os.path.dirname(r['path']) or '(raiz)'
+                  if d != cur:
+                      cur = d
+                      f.write(f'\n## {d}\n\n| Archivo | Tamano | Modificado |\n|---|---|---|\n')
+                  f.write(f"| {os.path.basename(r['path'])} | {r['size']} | {r['modified']} |\n")
+          print(f'Carpetas: {len(dirs)}  Archivos: {len(fls)}')
+          PY
+
+      - name: Mostrar resumen
+        run: |
+          head -60 docs/hit-air-oficial/INVENTARIO.md
+          echo "..."
+          wc -l docs/hit-air-oficial/INVENTARIO.md
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/hit-air-oficial
+          if git diff --staged --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "docs: inventario del arbol oficial hit-air for_shop_support"
+            git pull --rebase --autostash
+            git push
+          fi

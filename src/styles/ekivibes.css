@@ -1,6 +1,6 @@
 /* Hit-Air Colombia design system (fork de Ekivibes, repintado para moto) */
 * { box-sizing:border-box; margin:0; padding:0; }
-:root { --ha-black:#0D0D0F; --ha-red:#D62828; --ha-red-dark:#A81F1F; --ha-steel:#3A3F44; --ha-amber:#F2A900; --ink:#16171A; --line:#e2e3e5; --bg:#fff; }
+:root { --ha-black:#0D0D0F; --ha-red:#ED1C24; --ha-red-ink:#C1121F; --ha-red-dark:#B8151C; --ha-knockout:#0D0D0F; --ha-steel:#3A3F44; --ha-amber:#F2A900; --ink:#16171A; --line:#e2e3e5; --bg:#fff; }
 body { font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--bg); }
 .serif { font-family:'Rajdhani',Arial,sans-serif; letter-spacing:.02em; }
 .mono { font-family:'IBM Plex Mono','Courier New',monospace; }
@@ -35,7 +35,7 @@ img { max-width:100%; }
 .hero { position:relative; height:400px; background:linear-gradient(115deg,#0D0D0F,#1c1d20 55%,#2b2d31); display:flex; align-items:center; justify-content:center; overflow:hidden; }
 .hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 75% 30%,rgba(214,40,40,.20),transparent 55%);}
 .hero::before{content:'';position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--ha-red);z-index:2;}
-.hero-horse{position:absolute;right:4%;top:50%;transform:translateY(-50%);height:280px;width:auto;opacity:.14;z-index:1;}
+.hero-horse{color:#fff;position:absolute;right:4%;top:50%;transform:translateY(-50%);height:280px;width:auto;opacity:.14;z-index:1;}
 .hero-c{position:relative;z-index:2;text-align:center;color:#fff;padding:0 20px;}
 .hero-c .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ha-red);margin-bottom:14px;display:block;}
 .hero-c h1{font-family:'Rajdhani',Arial,sans-serif;font-size:44px;font-weight:700;letter-spacing:.01em;margin-bottom:16px;text-transform:uppercase;text-shadow:0 2px 24px rgba(0,0,0,.4);}
@@ -85,7 +85,7 @@ img { max-width:100%; }
 /* BANNER */
 .banner{position:relative;height:340px;background:linear-gradient(95deg,#0D0D0F,#26282c 60%,#3A3F44);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;}
 .banner::before{content:'';position:absolute;right:0;top:0;bottom:0;width:6px;background:var(--ha-red);}
-.banner-horse{position:absolute;right:8%;top:50%;transform:translateY(-50%);height:260px;opacity:.14;}
+.banner-horse{color:#fff;position:absolute;right:8%;top:50%;transform:translateY(-50%);height:260px;opacity:.14;}
 .banner-c{position:relative;z-index:2;}
 .banner-c h2{font-family:'Rajdhani',Arial,sans-serif;font-size:42px;font-weight:700;text-transform:uppercase;margin-bottom:12px;}
 .banner-c p{font-size:15px;max-width:420px;margin:0 auto 24px;opacity:.85;font-weight:400;}
@@ -106,8 +106,8 @@ img { max-width:100%; }
 .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:36px;}
 @media(max-width:820px){.footer-top{grid-template-columns:1fr 1fr;}}
 .footer-logo{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
-.footer-logo .lh{height:36px;filter:invert(1) brightness(2);}
-.footer-logo .lt{font-family:'Rajdhani',Arial,sans-serif;font-size:24px;letter-spacing:.1em;color:var(--ha-red);font-weight:700;}
+.footer-logo .lh{height:30px;color:#fff;}
+.footer-logo .lt{font-family:'Rajdhani',Arial,sans-serif;font-size:15px;letter-spacing:.22em;color:rgba(255,255,255,.62);font-weight:600;padding-left:10px;margin-left:2px;border-left:1px solid rgba(255,255,255,.22);}
 .footer-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;max-width:240px;font-weight:400;}
 .footer-col h5{font-family:'Rajdhani',Arial,sans-serif;font-size:20px;font-weight:700;margin-bottom:16px;text-transform:uppercase;}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
@@ -238,3 +238,64 @@ img { max-width:100%; }
 .pdp-d-videos{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:900px;margin:0 auto}
 .pdp-d-video{flex:1;min-width:280px;max-width:420px}
 .pdp-d-video iframe{width:100%;aspect-ratio:16/9;border:none;display:block}
+
+
+/* ==========================================================================
+   Identidad oficial de marca — Hit-Air Colombia
+   Distintivo regional en cabecera y leyenda legal en pie.
+   El logotipo hereda color por `currentColor`; no se recolorea la marca.
+   ========================================================================== */
+
+/* --- Cabecera: logotipo oficial + distintivo de distribuidor --- */
+.logo { color: var(--ha-black); text-decoration: none; }
+.logo .brand-mark { display: block; flex-shrink: 0; }
+
+.brand-region {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding-left: 11px;
+  margin-left: 2px;
+  border-left: 1px solid rgba(13, 13, 15, 0.16);
+  line-height: 1;
+}
+.brand-country {
+  font-family: 'Rajdhani', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--ha-black);
+}
+.brand-sep { color: rgba(13, 13, 15, 0.25); font-size: 13px; font-weight: 300; }
+.brand-role {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(13, 13, 15, 0.55);
+  white-space: nowrap;
+}
+@media (max-width: 1080px) { .brand-sep, .brand-role { display: none; } }
+@media (max-width: 560px)  { .brand-region { display: none; } }
+
+/* --- Pie: leyenda legal de representacion --- */
+.footer-bottom {
+  display: block;
+  text-align: left;
+}
+.footer-legal {
+  font-size: 12px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.52);
+  margin: 0 0 5px;
+  max-width: 780px;
+}
+.footer-legal-sub {
+  font-size: 11px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.32);
+  margin: 0;
+  max-width: 780px;
+}
+.footer-legal sup, .footer-legal-sub sup { font-size: 0.7em; }

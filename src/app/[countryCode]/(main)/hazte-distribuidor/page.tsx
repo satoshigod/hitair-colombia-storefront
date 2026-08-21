@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import Logo from "@modules/ekivibes/logo"
+import { HitAirIcon } from "@modules/ekivibes/brand/hitair-logo"
 import DistributorRegistrationForm from "@modules/business/components/distributor-form"
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default function HazteDistribuidor() {
     <>
       <div className="hero">
         <div className="hero-horse">
-          <Logo color="#ffffff" height={200} />
+          <HitAirIcon height={110} />
         </div>
         <div className="hero-c">
           <h1>Hazte Distribuidor</h1>

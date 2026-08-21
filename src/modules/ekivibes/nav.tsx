@@ -1,5 +1,5 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import Logo from "@modules/ekivibes/logo"
+import { HitAirLogo } from "@modules/ekivibes/brand/hitair-logo"
 import CartMenu from "@modules/ekivibes/cart-menu"
 
 // URL del storefront de Ekivibes (misma arquitectura multi-tienda, un solo
@@ -24,9 +24,13 @@ export default function Nav() {
         <span>Fabricado en Japon &middot; Certificacion CE</span>
       </div>
       <nav className="nav">
-        <LocalizedClientLink href="/" className="logo">
-          <Logo height={40} />
-          <span className="logo-text">HIT-AIR <span className="accent">COLOMBIA</span></span>
+        <LocalizedClientLink href="/" className="logo" aria-label="Hit-Air Colombia - inicio">
+          <HitAirLogo height={38} className="brand-mark" />
+          <span className="brand-region">
+            <span className="brand-country">COLOMBIA</span>
+            <span className="brand-sep" aria-hidden="true">|</span>
+            <span className="brand-role">Distribuidor Autorizado</span>
+          </span>
         </LocalizedClientLink>
         <div className="nav-menu">
           <LocalizedClientLink href="/store">Catalogo</LocalizedClientLink>

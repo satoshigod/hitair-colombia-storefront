@@ -1,7 +1,7 @@
 import { listProducts } from "@lib/data/products"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import EkivibesProductCard from "@modules/ekivibes/product-card"
-import Logo from "@modules/ekivibes/logo"
+import { HitAirIcon } from "@modules/ekivibes/brand/hitair-logo"
 
 const TECH_SPECS = [
   { v: "0.1-0.25s", l: "Tiempo de activacion" },
@@ -32,7 +32,7 @@ export default async function EkivibesInicio({
     <>
       <div className="hero">
         <div className="hero-horse">
-          <Logo color="#ffffff" height={280} />
+          <HitAirIcon height={150} />
         </div>
         <div className="hero-c">
           <span className="eyebrow">Distribuidor exclusivo Hit-Air Colombia</span>
@@ -96,7 +96,7 @@ export default async function EkivibesInicio({
 
       <div className="banner">
         <div className="banner-horse">
-          <Logo color="#ffffff" height={220} />
+          <HitAirIcon height={120} />
         </div>
         <div className="banner-c">
           <h2>Seguridad certificada</h2>

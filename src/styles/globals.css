@@ -175,7 +175,7 @@
   height: 20px;
   padding: 0 6px;
   border-radius: 9999px;
-  background: #D62828;
+  background: var(--ha-red-ink, #C1121F);
   color: #fff;
   font-size: 11px;
   font-weight: 600;
@@ -332,7 +332,7 @@
   color: inherit;
 }
 .ekv-card:focus-visible {
-  outline: 2px solid #D62828;
+  outline: 2px solid var(--ha-red, #ED1C24);
   outline-offset: 4px;
   border-radius: 10px;
 }
@@ -415,7 +415,7 @@
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 .ekv-card:hover .ekv-card-sizes li {
-  border-color: #D62828;
+  border-color: var(--ha-red, #ED1C24);
   color: #0D0D0F;
 }
 
@@ -562,7 +562,7 @@
   border: 2px solid transparent;
   transition: border-color 0.2s ease;
 }
-.ekv-lightbox-thumbs button.is-active { border-color: #D62828; }
+.ekv-lightbox-thumbs button.is-active { border-color: var(--ha-red, #ED1C24); }
 .ekv-lightbox-thumbs img {
   width: 100%;
   height: 100%;
@@ -615,7 +615,7 @@
   font-family: "Rajdhani", Arial, sans-serif;
   font-size: 1.375rem;
   font-weight: 600;
-  color: #D62828;
+  color: var(--ha-red-ink, #C1121F);
   margin: 0 0 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e2e3e5;
@@ -647,13 +647,13 @@
   transform: translateY(-50%);
   font-size: 1.25rem;
   font-weight: 300;
-  color: #D62828;
+  color: var(--ha-red-ink, #C1121F);
   transition: transform 0.25s ease;
 }
 details[open] .ekv-faq-q::after {
   transform: translateY(-50%) rotate(45deg);
 }
-details[open] .ekv-faq-q { color: #D62828; }
+details[open] .ekv-faq-q { color: var(--ha-red-ink, #C1121F); }
 .ekv-faq-a {
   font-family: "Inter", system-ui, sans-serif;
   font-size: 0.9rem;
@@ -694,7 +694,7 @@ details[open] .ekv-faq-q { color: #D62828; }
 }
 .ekv-faq-wa:hover { opacity: 0.85; }
 .ekv-faq-mail {
-  color: #D62828;
+  color: var(--ha-red-ink, #C1121F);
   font-family: "Inter", system-ui, sans-serif;
   font-size: 0.875rem;
   display: flex;
@@ -813,7 +813,7 @@ details[open] .ekv-faq-q { color: #D62828; }
   margin-top: 0.15rem;
   width: 16px;
   height: 16px;
-  accent-color: #D62828;
+  accent-color: var(--ha-red, #ED1C24);
   flex-shrink: 0;
   cursor: pointer;
 }
@@ -844,4 +844,4 @@ details[open] .ekv-faq-q { color: #D62828; }
 }
 .ekv-table tr:last-child td { border-bottom: none; }
 .ekv-table tr:nth-child(even) td { background: #f7f7f8; }
-.ekv-table td:first-child { font-weight: 600; color: #D62828; }
+.ekv-table td:first-child { font-weight: 600; color: var(--ha-red-ink, #C1121F); }

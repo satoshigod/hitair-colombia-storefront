@@ -1,5 +1,5 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import Logo from "@modules/ekivibes/logo"
+import { HitAirLogoPlain } from "@modules/ekivibes/brand/hitair-logo"
 
 const EQUITACION_URL = "https://ekivibes-storefront-production.up.railway.app/co/equitacion"
 
@@ -9,8 +9,8 @@ export default function Footer() {
       <div className="footer-top">
         <div>
           <div className="footer-logo">
-            <Logo color="#D62828" height={36} className="lh" />
-            <span className="lt">HIT-AIR COLOMBIA</span>
+            <HitAirLogoPlain height={30} className="lh" />
+            <span className="lt">COLOMBIA</span>
           </div>
           <p className="footer-desc">
             Distribuidor exclusivo de Hit-Air para motociclismo en Colombia.
@@ -53,8 +53,15 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 Hit-Air Colombia. Todos los derechos reservados.</span>
-        <span>Protegido desde 1995</span>
+        <p className="footer-legal">
+          © {new Date().getFullYear()} Hit-Air Colombia. Distribuidor y
+          representante autorizado de Hit-Air<sup>&reg;</sup> / Mugen Denko Co., Ltd.
+          en territorio colombiano.
+        </p>
+        <p className="footer-legal-sub">
+          Hit-Air<sup>&reg;</sup> es una marca registrada de Mugen Denko Co., Ltd.
+          (Nagoya, Japon). Protegido desde 1995.
+        </p>
       </div>
     </footer>
   )

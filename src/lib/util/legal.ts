@@ -16,15 +16,18 @@ export const LEGAL = {
   razonSocial: "Soulbyte S.A.S.",
   /** Nombre comercial del canal. */
   nombreComercial: "Hit-Air Colombia",
-  /** PENDIENTE: reemplazar por el NIT real con digito de verificacion. */
-  nit: "PENDIENTE — NIT",
-  /** PENDIENTE: direccion de notificaciones judiciales. */
-  direccion: "PENDIENTE — direccion, Medellin, Antioquia, Colombia",
+  /** NIT con digito de verificacion. */
+  nit: "901.923.996-1",
+  /** Direccion de notificaciones judiciales. */
+  direccion:
+    "Carrera 48 # 10-45, C.C. Monterrey, Oficina 2219, Medellin, Antioquia, Colombia",
   ciudad: "Medellin, Antioquia, Colombia",
   email: "hola@hitaircolombia.co",
-  /** PENDIENTE: numero de contacto y WhatsApp de atencion. */
-  telefono: "PENDIENTE — telefono",
-  whatsapp: "PENDIENTE — WhatsApp",
+  /** Contacto de atencion al cliente. */
+  telefono: "+57 324 572 3889",
+  whatsapp: "+57 324 572 3889",
+  /** Formato E.164 sin signos, para enlaces wa.me */
+  whatsappE164: "573245723889",
   instagram: "@hitair.colombia",
   instagramUrl: "https://www.instagram.com/hitair.colombia",
   /** Titular de la marca representada. */

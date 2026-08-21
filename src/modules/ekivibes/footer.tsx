@@ -1,6 +1,7 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { HitAirLogoPlain } from "@modules/ekivibes/brand/hitair-logo"
 import OfficialSeal from "@modules/ekivibes/brand/official-seal"
+import { LEGAL } from "@lib/util/legal"
 
 const EQUITACION_URL = "https://ekivibes-storefront-production.up.railway.app/co/equitacion"
 
@@ -55,10 +56,19 @@ export default function Footer() {
         <div className="footer-col">
           <h5>Contacto</h5>
           <ul>
-            <li>Medellin, Colombia</li>
+            <li>{LEGAL.ciudad}</li>
             <li><a href="mailto:hola@hitaircolombia.co" className="footer-link">hola@hitaircolombia.co</a></li>
             <li><a href="https://www.instagram.com/hitair.colombia" target="_blank" rel="noopener noreferrer" className="footer-link">@hitair.colombia</a></li>
-            <li>WhatsApp</li>
+            <li>
+              <a
+                href={`https://wa.me/${LEGAL.whatsappE164}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link"
+              >
+                WhatsApp {LEGAL.whatsapp}
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -69,6 +79,9 @@ export default function Footer() {
           © {new Date().getFullYear()} Hit-Air Colombia. Distribuidor y
           representante autorizado de Hit-Air<sup>&reg;</sup> / Mugen Denko Co., Ltd.
           en territorio colombiano.
+        </p>
+        <p className="footer-identidad">
+          {LEGAL.razonSocial} &middot; NIT {LEGAL.nit} &middot; {LEGAL.direccion}
         </p>
         <p className="footer-legal-sub">
           Hit-Air<sup>&reg;</sup> es una marca registrada de Mugen Denko Co., Ltd.

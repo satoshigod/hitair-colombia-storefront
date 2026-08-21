@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { LEGAL } from "@lib/util/legal"
 
 export const metadata: Metadata = {
   title: "Preguntas Frecuentes | Hit-Air Colombia",
@@ -141,7 +142,7 @@ const faqs = [
       },
       {
         q: "¿Puedo cambiar el chaleco si la talla no me queda bien?",
-        a: "Sí. Contáctanos dentro de los 14 días después de recibir tu pedido. El chaleco debe estar sin usar (solo probado), con etiquetas y en su empaque original. Escríbenos al WhatsApp o correo y coordinamos el cambio.",
+        a: "Sí. Tienes 14 días calendario desde la entrega para solicitar el cambio de talla: es nuestra política comercial y va más allá del mínimo legal. El chaleco debe estar sin usar (solo probado), con etiquetas, empaque original y el cartucho de CO₂ sin perforar. Adicionalmente, la ley te concede el derecho de retracto dentro de los 5 días hábiles siguientes a la entrega. Escríbenos por WhatsApp o correo y coordinamos.",
       },
       {
         q: "¿Tienen garantía los productos?",
@@ -180,15 +181,15 @@ export default function FAQPage() {
           <p>¿No encontraste la respuesta que buscabas?</p>
           <div className="ekv-faq-contact-links">
             <a
-              href="https://wa.me/573001234567"
+              href={`https://wa.me/${LEGAL.whatsappE164}`}
               target="_blank"
               rel="noopener noreferrer"
               className="ekv-faq-wa"
             >
               Escríbenos por WhatsApp
             </a>
-            <a href="mailto:contacto@ekivibes.co" className="ekv-faq-mail">
-              contacto@ekivibes.co
+            <a href={`mailto:${LEGAL.email}`} className="ekv-faq-mail">
+              {LEGAL.email}
             </a>
           </div>
         </div>

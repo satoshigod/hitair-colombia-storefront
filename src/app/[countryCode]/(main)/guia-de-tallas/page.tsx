@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { LEGAL } from "@lib/util/legal"
 
 export const metadata: Metadata = {
   title: "Guía de Tallas | Hit-Air Colombia",
@@ -133,7 +134,7 @@ export default function GuiaDeTallas() {
 
         <div className="ekv-page-cta">
           <p>¿Tienes dudas con tu talla?</p>
-          <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" className="ekv-btn-primary">
+          <a href={`https://wa.me/${LEGAL.whatsappE164}`} target="_blank" rel="noopener noreferrer" className="ekv-btn-primary">
             Consúltanos por WhatsApp
           </a>
         </div>

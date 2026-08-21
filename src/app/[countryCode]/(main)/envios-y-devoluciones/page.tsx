@@ -86,10 +86,12 @@ export default function EnviosYDevoluciones() {
           <h2>Cambios de talla</h2>
           <p>
             La talla es determinante para que el airbag funcione: una prenda holgada
-            reduce la protección. Si te queda mal, tienes{" "}
-            <strong>cinco (5) días hábiles</strong> desde la entrega para solicitar el
-            cambio, siempre que la prenda esté sin uso, con etiquetas y empaque original,
-            y con el cartucho de CO₂ sin perforar.
+            reduce la protección. Por eso ofrecemos un plazo de{" "}
+            <strong>catorce (14) días calendario</strong> desde la entrega para solicitar
+            el cambio de talla &mdash; una política comercial más amplia que el mínimo
+            legal &mdash;, siempre que la prenda esté sin uso, con etiquetas y empaque
+            original, y con el cartucho de CO₂ sin perforar. Esto es independiente del
+            derecho de retracto de cinco (5) días hábiles que te concede la ley.
           </p>
           <p>
             El costo del envío de ida y vuelta del cambio corre por cuenta del comprador.

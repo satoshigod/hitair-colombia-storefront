@@ -30,8 +30,8 @@ export default function Footer() {
         <div className="footer-col">
           <h5>Ayuda</h5>
           <ul>
-            <li>Envios y devoluciones</li>
-            <li>Contacto</li>
+            <li><LocalizedClientLink href="/envios-y-devoluciones" className="footer-link">Envios y devoluciones</LocalizedClientLink></li>
+            <li><a href="mailto:hola@hitaircolombia.co" className="footer-link">Contacto</a></li>
             <li><LocalizedClientLink href="/compras-empresariales" className="footer-link">Compras empresariales</LocalizedClientLink></li>
             <li><LocalizedClientLink href="/hazte-distribuidor" className="footer-link">Hazte distribuidor</LocalizedClientLink></li>
           </ul>
@@ -45,11 +45,19 @@ export default function Footer() {
           </ul>
         </div>
         <div className="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><LocalizedClientLink href="/condiciones-de-venta" className="footer-link">Condiciones de venta</LocalizedClientLink></li>
+            <li><LocalizedClientLink href="/politica-de-privacidad" className="footer-link">Politica de privacidad</LocalizedClientLink></li>
+            <li><LocalizedClientLink href="/terminos-y-condiciones" className="footer-link">Terminos y condiciones</LocalizedClientLink></li>
+          </ul>
+        </div>
+        <div className="footer-col">
           <h5>Contacto</h5>
           <ul>
             <li>Medellin, Colombia</li>
-            <li>hola@hitaircolombia.co</li>
-            <li>@hitair.colombia</li>
+            <li><a href="mailto:hola@hitaircolombia.co" className="footer-link">hola@hitaircolombia.co</a></li>
+            <li><a href="https://www.instagram.com/hitair.colombia" target="_blank" rel="noopener noreferrer" className="footer-link">@hitair.colombia</a></li>
             <li>WhatsApp</li>
           </ul>
         </div>

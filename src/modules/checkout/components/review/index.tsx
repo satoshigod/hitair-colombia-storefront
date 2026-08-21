@@ -4,6 +4,7 @@ import { Heading, Text, clx } from "@medusajs/ui"
 
 import PagoButton from "../payment-button"
 import { useSearchParams } from "next/navigation"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 const Revisión = ({ cart }: { cart: any }) => {
   const searchParams = useSearchParams()
@@ -38,10 +39,29 @@ const Revisión = ({ cart }: { cart: any }) => {
           <div className="flex items-start gap-x-1 w-full mb-6">
             <div className="w-full">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                Al hacer clic en Realizar pedido, confirmas que has
-                leído, entendido y aceptado nuestros Términos de uso, Términos de venta y
-                Returns Policy and acknowledge that you have read Medusa
-                la Política de privacidad de Hit-Air Colombia.
+                Al hacer clic en Realizar pedido confirmas que has leído y
+                aceptas los{" "}
+                <LocalizedClientLink
+                  href="/terminos-y-condiciones"
+                  className="underline"
+                >
+                  Términos y Condiciones
+                </LocalizedClientLink>
+                , las{" "}
+                <LocalizedClientLink
+                  href="/condiciones-de-venta"
+                  className="underline"
+                >
+                  Condiciones de Venta
+                </LocalizedClientLink>{" "}
+                y la{" "}
+                <LocalizedClientLink
+                  href="/politica-de-privacidad"
+                  className="underline"
+                >
+                  Política de Privacidad
+                </LocalizedClientLink>{" "}
+                de Hit-Air Colombia.
               </Text>
             </div>
           </div>

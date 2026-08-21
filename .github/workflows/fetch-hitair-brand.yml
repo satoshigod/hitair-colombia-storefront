@@ -117,29 +117,6 @@ jobs:
             mkdir -p "$DEST/mirror"
             cp -r /tmp/brand/mirror/. "$DEST/mirror/" 2>/dev/null || true
           fi
-          cat > "$DEST/FUENTE.md" <<'EOF'
-# Assets oficiales de marca Hit-Air
-
-Descargados automaticamente desde el directorio oficial de soporte a
-distribuidores de Mugen Denko Co., Ltd.:
-
-    https://www.hit-air.com/for_shop_support/hit-air_logo/
-
-Estructura:
-- `raw/`       Archivos originales tal como los publica Mugen Denko (PDF, JPG, ZIP)
-- `unzipped/`  Contenido de los paquetes ZIP
-- `svg/`       Derivados vectoriales SVG generados con pdftocairo
-- `png/`       Renders PNG de previsualizacion a 200 dpi
-- `mirror/`    Mirror recursivo del directorio (verificacion de completitud)
-
-Segun `hit-air_logotype_list.pdf` existen tres variantes de logotipo
-(Logo type 1, 2 y 3), cada una en version negra (`-bk`) y blanca (`-wh`),
-mas una version de alta resolucion (`_HR`).
-
-`Logotype-font.*` es la tipografia del logotipo. Uso restringido a la
-reproduccion de la marca; NO debe embeberse como webfont sin autorizacion
-escrita de Mugen Denko.
-EOF
           echo "=== Arbol final ==="
           find "$DEST" -type f | sort
           du -sh "$DEST"

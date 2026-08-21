@@ -1,0 +1,157 @@
+name: Fetch Hit-Air Official Brand Assets
+
+# Workflow temporal (ejecucion manual). Descarga el directorio oficial de
+# logotipos de Mugen Denko, descomprime los paquetes vectoriales y genera
+# derivados SVG/PNG listos para usar en el storefront.
+# Fuente: https://www.hit-air.com/for_shop_support/hit-air_logo/
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils unzip wget file
+
+      - name: Descargar assets oficiales
+        run: |
+          set -e
+          BASE="https://www.hit-air.com/for_shop_support/hit-air_logo"
+          mkdir -p /tmp/brand/raw
+          cd /tmp/brand/raw
+          for f in \
+            "Logotype-font.pdf" \
+            "Logotype-font.zip" \
+            "hit-air_logo1-bk.pdf" \
+            "hit-air_logo1-wh.jpg" \
+            "hit-air_logo1-wh.pdf" \
+            "hit-air_logo2-bk.pdf" \
+            "hit-air_logo2-wh.jpg" \
+            "hit-air_logo2-wh.pdf" \
+            "hit-air_logo3-bk.pdf" \
+            "hit-air_logo3-wh.jpg" \
+            "hit-air_logo3-wh.pdf" \
+            "hit-air_logo_HR.jpg" \
+            "hit-air_logo_HR.pdf" \
+            "hit-air_logotype.zip" \
+            "hit-air_logotype_list.pdf" ; do
+            echo "-> $f"
+            wget -q --show-progress --user-agent="Mozilla/5.0" "$BASE/$f" -O "$f"
+          done
+          echo "=== Descarga completa ==="
+          ls -la
+
+      - name: Mirror recursivo (por si hay archivos no listados)
+        continue-on-error: true
+        run: |
+          mkdir -p /tmp/brand/mirror
+          cd /tmp/brand/mirror
+          wget -q -r -np -nH --cut-dirs=2 -l 3 \
+            --user-agent="Mozilla/5.0" \
+            --reject-regex '(\?C=|index\.html)' \
+            https://www.hit-air.com/for_shop_support/hit-air_logo/ || true
+          echo "=== Mirror ==="
+          find . -type f | sort
+
+      - name: Descomprimir paquetes vectoriales
+        run: |
+          cd /tmp/brand/raw
+          mkdir -p /tmp/brand/unzipped
+          for z in *.zip; do
+            [ -e "$z" ] || continue
+            d="/tmp/brand/unzipped/${z%.zip}"
+            mkdir -p "$d"
+            unzip -o -q "$z" -d "$d" || echo "fallo unzip $z"
+          done
+          echo "=== Contenido descomprimido ==="
+          find /tmp/brand/unzipped -type f | sort
+          echo "=== Tipos de archivo ==="
+          find /tmp/brand/unzipped -type f -exec file {} \;
+
+      - name: Convertir PDF vectorial a SVG y PNG
+        run: |
+          set -e
+          mkdir -p /tmp/brand/svg /tmp/brand/png
+          convert_pdf () {
+            src="$1"; base="$2"
+            pages=$(pdfinfo "$src" 2>/dev/null | awk '/^Pages:/{print $2}')
+            echo "  $base -> $pages pagina(s)"
+            pdftocairo -svg "$src" "/tmp/brand/svg/${base}.svg" 2>/dev/null || echo "   (svg fallo)"
+            pdftocairo -png -r 200 -transp "$src" "/tmp/brand/png/${base}" 2>/dev/null || \
+              pdftocairo -png -r 200 "$src" "/tmp/brand/png/${base}" 2>/dev/null || echo "   (png fallo)"
+          }
+          echo "=== PDFs del directorio raiz ==="
+          for f in /tmp/brand/raw/*.pdf; do
+            [ -e "$f" ] || continue
+            b=$(basename "$f" .pdf)
+            convert_pdf "$f" "$b"
+          done
+          echo "=== PDFs/EPS/AI dentro de los ZIP ==="
+          find /tmp/brand/unzipped -type f \( -iname '*.pdf' -o -iname '*.ai' -o -iname '*.eps' \) | while read -r f; do
+            b="zip_$(basename "$f" | tr ' ' '_' | sed 's/\.[^.]*$//')"
+            convert_pdf "$f" "$b"
+          done
+          echo "=== Derivados generados ==="
+          ls -la /tmp/brand/svg /tmp/brand/png
+
+      - name: Consolidar en public/brand/hit-air
+        run: |
+          set -e
+          DEST="public/brand/hit-air"
+          rm -rf "$DEST"
+          mkdir -p "$DEST/raw" "$DEST/svg" "$DEST/png" "$DEST/unzipped"
+          cp -r /tmp/brand/raw/. "$DEST/raw/" 2>/dev/null || true
+          cp -r /tmp/brand/svg/. "$DEST/svg/" 2>/dev/null || true
+          cp -r /tmp/brand/png/. "$DEST/png/" 2>/dev/null || true
+          cp -r /tmp/brand/unzipped/. "$DEST/unzipped/" 2>/dev/null || true
+          if [ -d /tmp/brand/mirror ]; then
+            mkdir -p "$DEST/mirror"
+            cp -r /tmp/brand/mirror/. "$DEST/mirror/" 2>/dev/null || true
+          fi
+          cat > "$DEST/FUENTE.md" <<'EOF'
+# Assets oficiales de marca Hit-Air
+
+Descargados automaticamente desde el directorio oficial de soporte a
+distribuidores de Mugen Denko Co., Ltd.:
+
+    https://www.hit-air.com/for_shop_support/hit-air_logo/
+
+Estructura:
+- `raw/`       Archivos originales tal como los publica Mugen Denko (PDF, JPG, ZIP)
+- `unzipped/`  Contenido de los paquetes ZIP
+- `svg/`       Derivados vectoriales SVG generados con pdftocairo
+- `png/`       Renders PNG de previsualizacion a 200 dpi
+- `mirror/`    Mirror recursivo del directorio (verificacion de completitud)
+
+Segun `hit-air_logotype_list.pdf` existen tres variantes de logotipo
+(Logo type 1, 2 y 3), cada una en version negra (`-bk`) y blanca (`-wh`),
+mas una version de alta resolucion (`_HR`).
+
+`Logotype-font.*` es la tipografia del logotipo. Uso restringido a la
+reproduccion de la marca; NO debe embeberse como webfont sin autorizacion
+escrita de Mugen Denko.
+EOF
+          echo "=== Arbol final ==="
+          find "$DEST" -type f | sort
+          du -sh "$DEST"
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/brand/hit-air
+          if git diff --staged --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "chore(brand): assets oficiales Hit-Air desde directorio Mugen Denko"
+            git push
+          fi

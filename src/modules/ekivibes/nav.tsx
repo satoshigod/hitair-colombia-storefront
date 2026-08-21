@@ -2,11 +2,12 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import { HitAirLogo } from "@modules/ekivibes/brand/hitair-logo"
 import CartMenu from "@modules/ekivibes/cart-menu"
 
-// URL del storefront de Ekivibes (misma arquitectura multi-tienda, un solo
-// backend). El link "Equitacion" saca al usuario del sitio Hit-Air Colombia
-// (exclusivo moto) hacia la pagina de catalogo ecuestre en Ekivibes, tal
-// como hacen los sitios oficiales de referencia (hit-air-france.fr separa
-// EQUITATION / MOTO en el nav). No se muestra catalogo ecuestre aqui.
+// Hit-Air Colombia es el sitio oficial de la marca en el pais y ostenta la
+// distribucion exclusiva de AMBOS segmentos: motociclismo y equitacion.
+// Por decision comercial el catalogo ecuestre se atiende bajo la marca
+// Ekivibes, que es la division ecuestre de la misma casa (Soulbyte S.A.S.).
+// El nav separa MOTO / EQUITACION igual que los sitios oficiales de
+// referencia (hit-air-france.fr), pero la representacion es una sola.
 const EQUITACION_URL = "https://ekivibes-storefront-production.up.railway.app/co/equitacion"
 
 // Handles de las categorias en Medusa (exclusivas del canal Hit-Air Colombia).
@@ -20,7 +21,7 @@ export default function Nav() {
     <header>
       <div className="topbar">
         <span>Envio a toda Colombia</span>
-        <span>Distribuidor exclusivo Hit-Air en Colombia</span>
+        <span>Distribuidor exclusivo en Colombia &middot; Moto y Equitacion</span>
         <span>Fabricado en Japon &middot; Certificacion CE</span>
       </div>
       <nav className="nav">
@@ -38,7 +39,11 @@ export default function Nav() {
           <LocalizedClientLink href={CAT_ACCESORIOS}>Accesorios</LocalizedClientLink>
           <LocalizedClientLink href="/acerca-de-hit-air">Tecnologia</LocalizedClientLink>
           <LocalizedClientLink href="/preguntas-frecuentes">FAQ</LocalizedClientLink>
-          <a href={EQUITACION_URL} className="nav-crosslink">
+          <a
+            href={EQUITACION_URL}
+            className="nav-crosslink"
+            title="Equitacion — division ecuestre de Hit-Air Colombia (Ekivibes)"
+          >
             Equitacion <span className="xic">&#8599;</span>
           </a>
         </div>

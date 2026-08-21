@@ -299,3 +299,68 @@ img { max-width:100%; }
   max-width: 780px;
 }
 .footer-legal sup, .footer-legal-sub sup { font-size: 0.7em; }
+
+/* --- Sello de representacion oficial --------------------------------- */
+.ha-seal-band {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  margin: 4px 0 20px;
+}
+.ha-seal-band-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.ha-seal-band-mark { color: #fff; opacity: 0.9; flex-shrink: 0; margin-top: 2px; }
+.ha-seal-band-text { flex: 1; min-width: 260px; }
+.ha-seal-band-lead {
+  font-family: 'Rajdhani', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 5px;
+}
+.ha-seal-band-sub {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  max-width: 720px;
+}
+.ha-seal-band-sub strong { color: rgba(255, 255, 255, 0.85); font-weight: 600; }
+
+/* Sello de autoria para articulos y guias */
+.ha-seal-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 22px 24px;
+  margin: 40px 0 0;
+  background: var(--ha-black);
+  border-left: 4px solid var(--ha-red, #ED1C24);
+  border-radius: 3px;
+  flex-wrap: wrap;
+}
+.ha-seal-mark { color: #fff; flex-shrink: 0; }
+.ha-seal-body { flex: 1; min-width: 240px; }
+.ha-seal-title {
+  font-family: 'Rajdhani', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin: 0 0 6px;
+}
+.ha-seal-text {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+@media (max-width: 560px) {
+  .ha-seal-content { padding: 18px; gap: 14px; }
+}

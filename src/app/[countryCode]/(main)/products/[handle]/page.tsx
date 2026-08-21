@@ -90,16 +90,16 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
   if (!product) {
     return {
-      title: "Producto no encontrado | Ekivibes",
+      title: "Producto no encontrado | Hit-Air Colombia",
       description: "El producto no existe o fue movido.",
     }
   }
 
   return {
-    title: `${product.title} | Ekivibes`,
+    title: `${product.title} | Hit-Air Colombia`,
     description: `${product.title}`,
     openGraph: {
-      title: `${product.title} | Ekivibes`,
+      title: `${product.title} | Hit-Air Colombia`,
       description: `${product.title}`,
       images: product.thumbnail ? [product.thumbnail] : [],
     },

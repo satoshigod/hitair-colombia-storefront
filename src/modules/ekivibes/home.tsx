@@ -35,7 +35,7 @@ export default async function EkivibesInicio({
           <HitAirIcon height={150} />
         </div>
         <div className="hero-c">
-          <span className="eyebrow">Distribuidor exclusivo Hit-Air Colombia</span>
+          <span className="eyebrow">Sitio oficial &middot; Distribuidor exclusivo en Colombia</span>
           <h1>Airbag que se activa antes del impacto</h1>
           <p>
             Chalecos y chaquetas Hit-Air con sistema airbag integrado para

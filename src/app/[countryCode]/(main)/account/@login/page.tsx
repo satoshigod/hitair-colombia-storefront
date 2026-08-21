@@ -4,7 +4,7 @@ import LoginTemplate from "@modules/account/templates/login-template"
 
 export const metadata: Metadata = {
   title: "Sign in",
-  description: "Inicia sesión en tu cuenta Ekivibes.",
+  description: "Inicia sesión en tu cuenta Hit-Air Colombia.",
 }
 
 export default function Login() {

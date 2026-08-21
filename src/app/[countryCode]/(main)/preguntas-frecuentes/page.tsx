@@ -24,7 +24,7 @@ const faqs = [
       },
       {
         q: "¿Puedo usar cualquier cartucho de CO₂ con mi chaleco Hit-Air?",
-        a: "No. Debes usar exclusivamente cartuchos originales Hit-Air, ya que la calidad del metal y el sello están diseñados específicamente para estos chalecos. Usar cartuchos de otra marca puede impedir el despliegue del airbag en una caída o dañar el mecanismo del chasis. En Ekivibes vendemos los cartuchos originales de 50cc y 60cc compatibles con nuestros modelos.",
+        a: "No. Debes usar exclusivamente cartuchos originales Hit-Air, ya que la calidad del metal y el sello están diseñados específicamente para estos chalecos. Usar cartuchos de otra marca puede impedir el despliegue del airbag en una caída o dañar el mecanismo del chasis. En Hit-Air Colombia vendemos los cartuchos originales de 50cc y 60cc compatibles con nuestros modelos.",
       },
       {
         q: "¿Los cartuchos tienen fecha de vencimiento?",

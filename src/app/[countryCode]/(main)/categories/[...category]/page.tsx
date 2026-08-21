@@ -38,20 +38,20 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const category = normalizeCategory(params.category)
 
   if (!category) {
-    return { title: "Categoría | Ekivibes" }
+    return { title: "Categoría | Hit-Air Colombia" }
   }
 
   const productCategory = await getCategoryByHandle(category).catch(() => null)
 
   if (!productCategory) {
-    return { title: "Categoría | Ekivibes" }
+    return { title: "Categoría | Hit-Air Colombia" }
   }
 
   const title = productCategory.name
 
   return {
-    title: `${title} | Ekivibes`,
-    description: productCategory.description ?? `${title} en Ekivibes Colombia.`,
+    title: `${title} | Hit-Air Colombia`,
+    description: productCategory.description ?? `${title} en Hit-Air Colombia.`,
     alternates: {
       canonical: category.join("/"),
     },

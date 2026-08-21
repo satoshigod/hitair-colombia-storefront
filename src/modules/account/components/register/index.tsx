@@ -21,10 +21,10 @@ const Register = ({ setCurrentView }: Props) => {
       data-testid="register-page"
     >
       <h1 className="text-large-semi uppercase mb-6">
-        Únete a Ekivibes
+        Únete a Hit-Air Colombia
       </h1>
       <p className="text-center text-base-regular text-ui-fg-base mb-4">
-        Crea tu perfil en Ekivibes y accede a
+        Crea tu perfil en Hit-Air Colombia y accede a
         shopping experience.
       </p>
       <form className="w-full flex flex-col" action={formAction}>

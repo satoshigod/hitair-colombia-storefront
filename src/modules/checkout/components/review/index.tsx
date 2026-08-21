@@ -41,7 +41,7 @@ const Revisión = ({ cart }: { cart: any }) => {
                 Al hacer clic en Realizar pedido, confirmas que has
                 leído, entendido y aceptado nuestros Términos de uso, Términos de venta y
                 Returns Policy and acknowledge that you have read Medusa
-                la Política de privacidad de Ekivibes.
+                la Política de privacidad de Hit-Air Colombia.
               </Text>
             </div>
           </div>

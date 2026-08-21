@@ -12,7 +12,7 @@ import { retrieveCustomer } from "@lib/data/customer"
 
 export const metadata: Metadata = {
   title: "Perfil",
-  description: "Ver y editar tu perfil de Ekivibes.",
+  description: "Ver y editar tu perfil de Hit-Air Colombia.",
 }
 
 export default async function Perfil() {

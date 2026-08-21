@@ -1,5 +1,6 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { HitAirLogoPlain } from "@modules/ekivibes/brand/hitair-logo"
+import OfficialSeal from "@modules/ekivibes/brand/official-seal"
 
 const EQUITACION_URL = "https://ekivibes-storefront-production.up.railway.app/co/equitacion"
 
@@ -13,8 +14,9 @@ export default function Footer() {
             <span className="lt">COLOMBIA</span>
           </div>
           <p className="footer-desc">
-            Distribuidor exclusivo de Hit-Air para motociclismo en Colombia.
-            Productos originales, tecnologia japonesa y envio a todo el pais.
+            Sitio oficial de Hit-Air en Colombia. Distribuidor exclusivo de la
+            marca para los dos segmentos: motociclismo y equitacion. Productos
+            originales importados de Japon y envio a todo el pais.
           </p>
         </div>
         <div className="footer-col">
@@ -22,7 +24,7 @@ export default function Footer() {
           <ul>
             <li><LocalizedClientLink href="/categories/chaquetas-y-chalecos-moto">Chaquetas y chalecos</LocalizedClientLink></li>
             <li><LocalizedClientLink href="/categories/accesorios-moto">Accesorios</LocalizedClientLink></li>
-            <li><a href={EQUITACION_URL}>Equitacion (Ekivibes)</a></li>
+            <li><a href={EQUITACION_URL}>Equitacion &mdash; division ecuestre</a></li>
           </ul>
         </div>
         <div className="footer-col">
@@ -52,6 +54,8 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+      <OfficialSeal variant="band" />
+
       <div className="footer-bottom">
         <p className="footer-legal">
           © {new Date().getFullYear()} Hit-Air Colombia. Distribuidor y

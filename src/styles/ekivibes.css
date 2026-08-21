@@ -385,3 +385,63 @@ img { max-width:100%; }
   margin: 0 0 5px;
   max-width: 780px;
 }
+
+/* --- Bloque de autenticidad en ficha de producto ---------------------- */
+.ha-auth {
+  background: #fafafa;
+  border: 1px solid #e6e7e9;
+  border-top: 3px solid var(--ha-red, #ED1C24);
+  border-radius: 3px;
+  padding: 28px 28px 24px;
+  margin: 8px 0 40px;
+}
+.ha-auth-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.ha-auth-icon { color: var(--ha-black); flex-shrink: 0; }
+.ha-auth-title {
+  font-family: 'Rajdhani', Arial, sans-serif;
+  font-size: 1.5rem; font-weight: 700; letter-spacing: 0.02em;
+  color: var(--ha-black); margin: 0;
+}
+.ha-auth-grid {
+  list-style: none; padding: 0; margin: 0 0 18px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 28px;
+}
+@media (max-width: 720px) { .ha-auth-grid { grid-template-columns: 1fr; gap: 14px; } }
+.ha-auth-item { display: flex; flex-direction: column; gap: 3px; }
+.ha-auth-item-t {
+  font-family: 'Rajdhani', Arial, sans-serif;
+  font-size: 1rem; font-weight: 700; color: var(--ha-black);
+  letter-spacing: 0.01em;
+}
+.ha-auth-item-d { font-size: 0.85rem; line-height: 1.6; color: #4b5563; }
+.ha-auth-warn {
+  font-size: 0.82rem; line-height: 1.6; color: #4b5563;
+  background: #fff; border-left: 3px solid var(--ha-red, #ED1C24);
+  padding: 11px 14px; margin: 0 0 14px; border-radius: 2px;
+}
+.ha-auth-warn strong { color: var(--ha-red-ink, #C1121F); }
+.ha-auth-links { font-size: 0.85rem; margin: 0; color: #6b7280; }
+.ha-auth-links a { color: var(--ha-red-ink, #C1121F); text-decoration: underline; }
+
+/* --- Centro de descargas --------------------------------------------- */
+.ha-doc-list { display: flex; flex-direction: column; gap: 16px; }
+.ha-doc {
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+  border: 1px solid #e6e7e9; border-radius: 3px;
+  padding: 22px 24px; background: #fff;
+}
+.ha-doc-main { flex: 1; min-width: 260px; }
+.ha-doc-seg {
+  display: inline-block; font-family: 'Rajdhani', Arial, sans-serif;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #fff; background: var(--ha-black);
+  padding: 3px 9px; border-radius: 2px; margin-bottom: 9px;
+}
+.ha-doc-title {
+  font-family: 'Rajdhani', Arial, sans-serif;
+  font-size: 1.3rem; font-weight: 700; color: var(--ha-black); margin: 0 0 7px;
+}
+.ha-doc-desc { font-size: 0.87rem; line-height: 1.65; color: #4b5563; margin: 0 0 9px; }
+.ha-doc-meta { font-size: 0.78rem; color: #6b7280; margin: 0; letter-spacing: 0.02em; }
+.ha-doc-btn { flex-shrink: 0; text-decoration: none !important; }
+.ha-doc-note { font-size: 0.85rem; color: #6b7280; margin-top: 14px; line-height: 1.65; }

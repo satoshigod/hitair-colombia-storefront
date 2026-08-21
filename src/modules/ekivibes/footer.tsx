@@ -42,6 +42,7 @@ export default function Footer() {
           <ul>
             <li><LocalizedClientLink href="/acerca-de-hit-air" className="footer-link">Acerca de Hit-Air</LocalizedClientLink></li>
             <li><LocalizedClientLink href="/guia-de-tallas" className="footer-link">Guia de tallas</LocalizedClientLink></li>
+            <li><LocalizedClientLink href="/descargas" className="footer-link">Descargas y manuales</LocalizedClientLink></li>
             <li><LocalizedClientLink href="/preguntas-frecuentes" className="footer-link">Preguntas frecuentes</LocalizedClientLink></li>
           </ul>
         </div>
